@@ -1,0 +1,13 @@
+I1102 19:02:08.267607   57127 load.go:31] Reloading schema and connectors...
+E1102 19:02:08.280720   57127 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+E1102 19:02:08.281841   57127 load.go:73] Could not load sources: 
+Errors: schema/schema.gql:56:6: Cannot redeclare type Mutation.
+I1102 19:02:08.282442   57127 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] 
+I1102 19:02:08.286112   57127 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/implicit.gql"
+I1102 19:02:08.286209   57127 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/input.gql"
+I1102 19:02:08.286279   57127 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/mutation.gql"
+I1102 19:02:08.286330   57127 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/query.gql"
+I1102 19:02:08.286375   57127 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/relation.gql"
+I1102 19:02:08.286395   57127 load.go:74] Finished reloading
+I1102 19:02:08.350293   57127 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001

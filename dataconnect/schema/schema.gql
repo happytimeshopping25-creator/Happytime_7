@@ -1,0 +1,79 @@
+# Happy Time Shopping Center — E-commerce Schema
+# Designed for Firebase DataConnect + Gemini AI
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  phone: String
+  role: String! # admin | customer | merchant
+  loyaltyPoints: Int
+  createdAt: Timestamp
+}
+
+type Product {
+  id: ID!
+  title: String!
+  description: String
+  price: Float!
+  imageUrl: String
+  category: String
+  stock: Int
+  merchantId: ID!
+  createdAt: Timestamp
+}
+
+type OrderItem {
+  productId: ID!
+  title: String!
+  quantity: Int!
+  price: Float!
+}
+
+type Order {
+  id: ID!
+  userId: ID!
+  items: [OrderItem!]!
+  total: Float!
+  status: String! # pending | confirmed | shipped | delivered | cancelled
+  address: String!
+  createdAt: Timestamp
+}
+
+type Merchant {
+  id: ID!
+  name: String!
+  email: String
+  phone: String
+  storeName: String
+  description: String
+  logoUrl: String
+  rating: Float
+  createdAt: Timestamp
+}
+
+# Mutations
+type Mutation {
+  createUser(name: String!, email: String!, phone: String): User
+  addProduct(title: String!, price: Float!, category: String!, stock: Int!): Product
+  createOrder(userId: ID!, items: [OrderItemInput!]!, address: String!): Order
+  updateOrderStatus(orderId: ID!, status: String!): Order
+  addLoyaltyPoints(userId: ID!, points: Int!): User
+}
+
+input OrderItemInput {
+  productId: ID!
+  title: String!
+  quantity: Int!
+  price: Float!
+}
+
+# Queries
+type Query {
+  getProducts(category: String): [Product]
+  getProductById(id: ID!): Product
+  getOrdersByUser(userId: ID!): [Order]
+  getMerchantProducts(merchantId: ID!): [Product]
+  getUserByEmail(email: String!): User
+}
+
