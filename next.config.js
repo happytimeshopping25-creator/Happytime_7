@@ -1,3 +1,5 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
@@ -11,6 +13,17 @@ const nextConfig = {
   },
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+  
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@/components': path.resolve(__dirname, 'components'),
+      '@/lib': path.resolve(__dirname, 'lib'),
+      '@/src': path.resolve(__dirname, 'src'),
+    };
+    return config;
+  },
+  
   /*
   // Not a valid Next.js config option, will cause the server to fail
   // Keeping it here for reference in case the user meant a different config
