@@ -1,118 +1,97 @@
-"use client";
+'use client'
+
 import { useEffect, useMemo, useState } from "react";
 import { collection, onSnapshot, orderBy, query, where, updateDoc, doc } from "firebase/firestore";
-import { db } from "@/lib/firestore";
+import { db } from "../../../lib/firestore";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
 
-type Order = {
+interface Order {
   id: string;
-  userId: string;
-  total: number;
   status: string;
-  payment?: { method: string; status: string };
-  items: { title: string; qty: number; price: number }[];
-  customer?: { fullName?: string; phone?: string; address?: string; note?: string };
-  createdAt?: any;
-};
+  // Add other order properties here
+}
 
-const STATUSES = ["pending","confirmed","preparing","shipped","done","cancelled"] as const;
-
-export default function AdminOrdersPage() {
+const OrdersPage = () => {
   const [orders, setOrders] = useState<Order[]>([]);
-  const [filter, setFilter] = useState<string>("all");
-  const [qText, setQText] = useState("");
+  const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    const base = collection(db, "orders");
-    const qy = filter === "all"
-      ? query(base, orderBy("createdAt","desc"))
-      : query(base, where("status","==",filter), orderBy("createdAt","desc"));
-    const unsub = onSnapshot(qy, (snap) => {
-      setOrders(snap.docs.map(d => ({ id: d.id, ...(d.data() as any) })));
+    let q = query(collection(db, "orders"), orderBy("createdAt", "desc"));
+    if (filter !== "all") {
+      q = query(q, where("status", "==", filter));
+    }
+
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const newOrders = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() } as Order));
+      setOrders(newOrders);
     });
-    return () => unsub();
+
+    return () => unsubscribe();
   }, [filter]);
 
-  const filtered = useMemo(() => {
-    if (!qText.trim()) return orders;
-    const t = qText.toLowerCase();
-    return orders.filter(o =>
-      o.id.toLowerCase().includes(t) ||
-      o.customer?.fullName?.toLowerCase().includes(t) ||
-      o.customer?.phone?.toLowerCase().includes(t)
-    );
-  }, [orders, qText]);
-
-  const setStatus = async (id: string, status: string) => {
-    try {
-      await updateDoc(doc(db, "orders", id), { status });
-      toast.success("تم تحديث الحالة");
-      // ⚠️ الـ Cloud Function onUpdate سترسل إشعارًا للمستخدم تلقائيًا
-    } catch {
-      toast.error("تعذر تحديث الحالة");
+  const filteredOrders = useMemo(() => {
+    if (filter === "all") {
+      return orders;
     }
+    return orders.filter((order) => order.status === filter);
+  }, [orders, filter]);
+
+  const handleStatusChange = async (orderId: string, newStatus: string) => {
+    const orderRef = doc(db, "orders", orderId);
+    await updateDoc(orderRef, { status: newStatus });
   };
 
   return (
-    <main className="container py-8 grid gap-5">
-      <div className="flex gap-3 flex-wrap items-center">
-        <div className="space-y-1">
-          <Label>فلترة الحالة</Label>
-          <Select value={filter} onValueChange={setFilter}>
-            <SelectTrigger className="w-[220px]">
-              <SelectValue placeholder="اختر حالة" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">الكل</SelectItem>
-              {STATUSES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
-            </SelectContent>
-          </Select>
-        </div>
-        <div className="space-y-1">
-          <Label>بحث</Label>
-          <Input placeholder="رقم الطلب / الاسم / الهاتف" value={qText} onChange={e=>setQText(e.target.value)} />
-        </div>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Orders</h1>
+      <div className="mb-4">
+        <Label htmlFor="status-filter">Filter by status:</Label>
+        <Select onValueChange={setFilter} defaultValue="all">
+          <SelectTrigger id="status-filter" className="w-[180px]">
+            <SelectValue placeholder="Filter by status" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">All</SelectItem>
+            <SelectItem value="pending">Pending</SelectItem>
+            <SelectItem value="shipped">Shipped</SelectItem>
+            <SelectItem value="delivered">Delivered</SelectItem>
+            <SelectItem value="cancelled">Cancelled</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
-
-      {filtered.map(o => (
-        <Card key={o.id}>
-          <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle>#{o.id.slice(0,6)} — {o.customer?.fullName || "عميل"}</CardTitle>
-            <div className="flex items-center gap-2">
-              <Badge variant="outline">Total: {o.total?.toFixed(3)} OMR</Badge>
-              <Badge>{o.payment?.method || "cod"} / {o.payment?.status || "unpaid"}</Badge>
-            </div>
-          </CardHeader>
-          <CardContent className="grid gap-3">
-            <div className="opacity-80">📞 {o.customer?.phone} — 📍 {o.customer?.address}</div>
-            <ul className="list-disc pr-5">
-              {o.items?.map((it, i) => (
-                <li key={i}>{it.title} × {it.qty} — {(it.qty*it.price).toFixed(3)} OMR</li>
-              ))}
-            </ul>
-
-            <div className="flex items-center gap-3">
-              <Label>الحالة:</Label>
-              <Select value={o.status} onValueChange={(v)=>setStatus(o.id, v)}>
-                <SelectTrigger className="w-[220px]">
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  {STATUSES.map(s => <SelectItem key={s} value={s}>{s}</SelectItem>)}
-                </SelectContent>
-              </Select>
-              <Button variant="secondary" onClick={()=>navigator.clipboard.writeText(o.id)}>نسخ رقم الطلب</Button>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-      {!filtered.length && <div className="p-8 text-center opacity-70">لا يوجد نتائج</div>}
-    </main>
+      <div className="grid gap-4">
+        {filteredOrders.map((order) => (
+          <Card key={order.id}>
+            <CardHeader>
+              <CardTitle>Order #{order.id}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex justify-between items-center">
+                <div>
+                  <p>Status: <Badge>{order.status}</Badge></p>
+                  {/* Add more order details here */}
+                </div>
+                <Select onValueChange={(newStatus) => handleStatusChange(order.id, newStatus)} defaultValue={order.status}>
+                  <SelectTrigger className="w-[180px]">
+                    <SelectValue placeholder="Change status" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="pending">Pending</SelectItem>
+                    <SelectItem value="shipped">Shipped</SelectItem>
+                    <SelectItem value="delivered">Delivered</SelectItem>
+                    <SelectItem value="cancelled">Cancelled</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </div>
   );
-}
+};
+
+export default OrdersPage;

@@ -1,12 +1,10 @@
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
 import { Fragment, useState, FormEvent } from 'react'
-import ProductListItem from ../order-summary/product-list-item
+import ProductListItem from '../order-summary/product-list-item'
 import Rating from '@/components/ui/rating'
-import Button from '@/components/ui/button'
-// Corrected import:
-import { Button as RenamedButton } from '@/components/ui/button'
+import { Button } from '@/components/ui/button'
 import { handleCreateReview } from '@/app/product/[handle]/actions'
-import { CreateReviewPayload } from '@/app/product/[handle]/actions'
+import { type CreateReviewPayload } from '@/app/product/[handle]/actions'
 
 type Props = {
   isOpen: boolean
@@ -28,15 +26,15 @@ type Props = {
 
 export default function ReviewModal({ isOpen, onClose, productDetails }: Props) {
   const [rating, setRating] = useState(5)
-  const [review, setReview] = useState()
-  const { user: customer } = useAuth() // Assuming useAuth is defined elsewhere
+  const [review, setReview] = useState<string>("")
+  // const { user: customer } = useAuth() // Assuming useAuth is defined elsewhere
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
 
     const payload: CreateReviewPayload = {
-      productId: productDetails?.productID ?? ,
-      customerId: customer?.uid ?? ,
+      productId: productDetails?.productID ?? "",
+      // customerId: customer?.uid ?? "",
       rating, // Assuming rating is a number
       content: review
     }
@@ -45,7 +43,7 @@ export default function ReviewModal({ isOpen, onClose, productDetails }: Props) 
 
     // Clear form and close modal
     setRating(5)
-    setReview()
+    setReview("")
     onClose()
   }
 
@@ -86,9 +84,8 @@ export default function ReviewModal({ isOpen, onClose, productDetails }: Props) 
                     price: Number(productDetails?.variantPrice || 100),
                     image: {
                       url:
-                        productDetails?.variantImage?.url || // Assuming url is a string
-                        https://rstr.in/google/dynamic-template/r-DgXIxPzlR,
-                      altText: productDetails?.variantImage?.altText || Product Image,
+                        productDetails?.variantImage?.url || "https://rstr.in/google/dynamic-template/r-DgXIxPzlR",
+                      altText: productDetails?.variantImage?.altText || 'Product Image',
                       width: productDetails?.variantImage?.width || 150,
                       height: productDetails?.variantImage?.height || 150
                     }
@@ -110,7 +107,7 @@ export default function ReviewModal({ isOpen, onClose, productDetails }: Props) 
                   />
                   <div className="flex pt-6 md:pt-8 md:flex-col md:gap-2">
                     <Button type="submit" className="w-full">
-                      Submit // Assuming Button component exists and takes type and className props
+                      Submit
                     </Button>
                     <Button
                       type="button"
@@ -130,4 +127,3 @@ export default function ReviewModal({ isOpen, onClose, productDetails }: Props) 
     </Transition>
   )
 }
-

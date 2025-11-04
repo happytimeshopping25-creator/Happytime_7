@@ -1,27 +1,37 @@
 "use client";
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+
+import { createContext, useContext, useEffect, useState, ReactNode } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
-import { auth } from "@/lib/firebaseClient"; // تأكد من المسار الصحيح لملف تهيئة Firebase
+import { useFirebase } from "@/components/FirebaseProvider";
 
 interface AuthContextType {
   user: User | null;
+  loading: boolean;
 }
 
-const AuthContext = createContext<AuthContextType>({ user: null });
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  loading: true,
+});
 
-export function useAuth() {
-  return useContext(AuthContext);
-}
-
-export default function AuthProvider({ children }: { children: ReactNode }) {
+export function AuthProvider({ children }: { children: ReactNode }) {
+  const { auth } = useFirebase(); // Correctly consume the auth service
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       setUser(firebaseUser);
+      setLoading(false);
     });
     return () => unsubscribe();
-  }, []);
+  }, [auth]); // Add auth as a dependency
 
-  return <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContext.Provider value={{ user, loading }}>
+      {!loading && children}
+    </AuthContext.Provider>
+  );
 }
+
+export const useAuth = () => useContext(AuthContext);

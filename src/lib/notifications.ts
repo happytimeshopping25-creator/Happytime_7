@@ -1,5 +1,5 @@
 import { getMessaging, getToken, onMessage, isSupported } from "firebase/messaging"
-import { firebaseApp } from "@/lib/firebaseClient"
+import { firebaseApp } from "../../../lib/firebaseClient"
 import { db } from "@/lib/firestore"
 import { doc, setDoc, arrayUnion } from "firebase/firestore"
 

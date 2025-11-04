@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '@/lib/firebase';
+import { auth } from '../../../lib/firebase';
 import { signOut } from 'firebase/auth';
 
 const AuthStatus: React.FC = () => {

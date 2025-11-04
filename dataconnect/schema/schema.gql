@@ -1,79 +1,49 @@
-# Happy Time Shopping Center — E-commerce Schema
-# Designed for Firebase DataConnect + Gemini AI
-
-type User {
-  id: ID!
-  name: String!
+type User @table {
   email: String!
-  phone: String
-  role: String! # admin | customer | merchant
-  loyaltyPoints: Int
-  createdAt: Timestamp
+  displayName: String!
+  userType: String!
+  createdAt: Timestamp!
+  passwordHash: String
+  phoneNumber: String
+  address: String
 }
 
-type Product {
-  id: ID!
-  title: String!
-  description: String
-  price: Float!
-  imageUrl: String
-  category: String
-  stock: Int
-  merchantId: ID!
-  createdAt: Timestamp
-}
-
-type OrderItem {
-  productId: ID!
-  title: String!
-  quantity: Int!
-  price: Float!
-}
-
-type Order {
-  id: ID!
-  userId: ID!
-  items: [OrderItem!]!
-  total: Float!
-  status: String! # pending | confirmed | shipped | delivered | cancelled
-  address: String!
-  createdAt: Timestamp
-}
-
-type Merchant {
-  id: ID!
+type Vendor @table {
+  user: User!
   name: String!
-  email: String
-  phone: String
-  storeName: String
+  contactEmail: String!
+  createdAt: Timestamp!
   description: String
   logoUrl: String
-  rating: Float
-  createdAt: Timestamp
+  physicalStoreLocation: String
+  openingHours: String
 }
 
-# Mutations
-type Mutation {
-  createUser(name: String!, email: String!, phone: String): User
-  addProduct(title: String!, price: Float!, category: String!, stock: Int!): Product
-  createOrder(userId: ID!, items: [OrderItemInput!]!, address: String!): Order
-  updateOrderStatus(orderId: ID!, status: String!): Order
-  addLoyaltyPoints(userId: ID!, points: Int!): User
-}
-
-input OrderItemInput {
-  productId: ID!
-  title: String!
-  quantity: Int!
+type Product @table {
+  vendor: Vendor!
+  name: String!
   price: Float!
+  stockQuantity: Int!
+  createdAt: Timestamp!
+  description: String
+  imageUrl: String
+  category: String
 }
 
-# Queries
-type Query {
-  getProducts(category: String): [Product]
-  getProductById(id: ID!): Product
-  getOrdersByUser(userId: ID!): [Order]
-  getMerchantProducts(merchantId: ID!): [Product]
-  getUserByEmail(email: String!): User
+type Order @table {
+  customer: User!
+  orderDate: Timestamp!
+  totalAmount: Float!
+  status: String!
+  createdAt: Timestamp!
+  shippingAddress: String
+  paymentMethod: String
 }
 
+type OrderItem @table {
+  order: Order!
+  product: Product!
+  quantity: Int!
+  unitPrice: Float!
+  subtotal: Float
+}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 // The import statement for auth and useRouter should be separate and clean
-import { auth } from "@/lib/firebaseClient";
+import { auth } from "../../../lib/firebase";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {

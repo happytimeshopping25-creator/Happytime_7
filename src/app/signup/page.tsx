@@ -1,80 +1,41 @@
-"use client";
+'use client'
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/lib/firebase"; // Assuming firebase config is in lib
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { auth } from '../../lib/firebase'
 
-export default function SignUp() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const router = useRouter();
+export default function Signup() {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const router = useRouter()
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth)
 
-  const handleSignUp = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      router.push("/"); // Redirect to home page after successful sign-up
-    } catch (err: any) {
-      setError(err.message);
+    const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+        const success = await createUserWithEmailAndPassword(email, password)
+        if (success) {
+            router.push('/login')
+        }
     }
-  };
 
-  return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
-      <div className="w-full max-w-md p-8 space-y-6 bg-gray-800 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-center">Create an Account</h1>
-        <form onSubmit={handleSignUp} className="space-y-6">
-          <div>
-            <label
-              htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-400"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full px-4 py-2 text-white bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+    return (
+        <form onSubmit={handleSignup}>
+            <h2>Sign Up</h2>
+            <input 
+                type="email" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+                placeholder="Email"
             />
-          </div>
-          <div>
-            <label
-              htmlFor="password"
-              className="block mb-2 text-sm font-medium text-gray-400"
-            >
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              minLength={6}
-              className="w-full px-4 py-2 text-white bg-gray-700 border border-gray-600 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+            <input 
+                type="password" 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
+                placeholder="Password"
             />
-          </div>
-          {error && <p className="text-red-500 text-sm">{error}</p>}
-          <button
-            type="submit"
-            className="w-full py-2 px-4 font-semibold text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:ring-blue-800"
-          >
-            Sign Up
-          </button>
+            <button type="submit">Sign Up</button>
+            {error && <p>{error.message}</p>}
         </form>
-         <p className="text-center text-gray-400">
-          Already have an account?{' '}
-          <a href="/signin" className="text-blue-500 hover:underline">
-            Sign In
-          </a>
-        </p>
-      </div>
-    </div>
-  );
+    )
 }

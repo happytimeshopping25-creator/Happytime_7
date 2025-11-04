@@ -1,16 +1,32 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, ActivityIndicator } from "react-native";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/src/firebase.native"; // افترض أن لديك هذا الملف
+import { auth } from "@/firebase.native";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
+  const mapFirebaseError = (errorCode: string) => {
+    switch (errorCode) {
+      case "auth/invalid-email":
+        return "البريد الإلكتروني غير صالح.";
+      case "auth/user-not-found":
+      case "auth/wrong-password":
+        return "البريد الإلكتروني أو كلمة المرور غير صحيحة.";
+      default:
+        return "حدث خطأ ما، يرجى المحاولة مرة أخرى.";
+    }
+  };
+
   const handleLogin = () => {
+    setLoading(true);
+    setError("");
     signInWithEmailAndPassword(auth, email, password)
-      .catch(err => setError(err.message));
+      .catch(err => setError(mapFirebaseError(err.code)))
+      .finally(() => setLoading(false));
   };
 
   return (
@@ -32,7 +48,11 @@ export default function LoginScreen() {
         secureTextEntry
       />
       {error ? <Text style={styles.error}>{error}</Text> : null}
-      <Button title="دخول" onPress={handleLogin} />
+      {loading ? (
+        <ActivityIndicator size="large" color="#0000ff" />
+      ) : (
+        <Button title="دخول" onPress={handleLogin} disabled={loading} />
+      )}
     </View>
   );
 }

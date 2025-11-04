@@ -369,3 +369,425 @@ I1102 19:02:08.286395   57127 load.go:74] Finished reloading
 I1102 19:02:08.350293   57127 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
  {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1102 19:02:08.267607   57127 load.go:31] Reloading schema and connectors...\nE1102 19:02:08.280720   57127 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\nE1102 19:02:08.281841   57127 load.go:73] Could not load sources: \nErrors: schema/schema.gql:56:6: Cannot redeclare type Mutation.\nI1102 19:02:08.282442   57127 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] \nI1102 19:02:08.286112   57127 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/implicit.gql\"\nI1102 19:02:08.286209   57127 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/input.gql\"\nI1102 19:02:08.286279   57127 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/mutation.gql\"\nI1102 19:02:08.286330   57127 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/query.gql\"\nI1102 19:02:08.286375   57127 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/relation.gql\"\nI1102 19:02:08.286395   57127 load.go:74] Finished reloading\nI1102 19:02:08.350293   57127 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
 [error] [Firebase Plugin] error:  {}
+[debug] [2025-11-03T08:32:45.218Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2025-11-03T08:33:41.661Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T08:33:41.663Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T08:33:41.665Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T08:33:41.674Z] Checked if tokens are valid: false, expires at: 1762113724119
+[debug] [2025-11-03T08:33:41.675Z] Checked if tokens are valid: false, expires at: 1762113724119
+[debug] [2025-11-03T08:33:41.676Z] > refreshing access token with scopes: []
+[debug] [2025-11-03T08:33:41.681Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-03T08:33:41.681Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-03T08:33:41.787Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[debug] [2025-11-03T08:33:41.949Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-03T08:33:41.951Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-03T08:33:41.971Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T08:33:41.975Z] Checked if tokens are valid: true, expires at: 1762162420952
+[debug] [2025-11-03T08:33:41.977Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T08:33:42.689Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T08:33:42.690Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[debug] [2025-11-03T08:33:46.582Z] W1103 08:33:46.571612     408 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W1103 08:33:46.571612     408 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\n"}}
+[debug] [2025-11-03T08:33:46.589Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-03T08:33:46.589Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-03T08:33:46.590Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-03T08:33:46.773Z] I1103 08:33:46.704156     413 load.go:31] Reloading schema and connectors...
+E1103 08:33:46.721959     413 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+E1103 08:33:46.722037     413 load.go:73] Could not load sources: 
+Errors: schema/schema.gql:56:6: Cannot redeclare type Mutation.
+I1103 08:33:46.722951     413 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] 
+I1103 08:33:46.723052     413 load.go:74] Finished reloading
+I1103 08:33:46.750197     413 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 08:33:46.704156     413 load.go:31] Reloading schema and connectors...\nE1103 08:33:46.721959     413 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\nE1103 08:33:46.722037     413 load.go:73] Could not load sources: \nErrors: schema/schema.gql:56:6: Cannot redeclare type Mutation.\nI1103 08:33:46.722951     413 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] \nI1103 08:33:46.723052     413 load.go:74] Finished reloading\nI1103 08:33:46.750197     413 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[error] [Firebase Plugin] error:  {}
+[debug] [2025-11-03T12:34:41.186Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2025-11-03T12:35:55.829Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T12:35:55.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T12:35:55.836Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T12:35:55.845Z] Checked if tokens are valid: false, expires at: 1762162420952
+[debug] [2025-11-03T12:35:55.847Z] Checked if tokens are valid: false, expires at: 1762162420952
+[debug] [2025-11-03T12:35:55.848Z] > refreshing access token with scopes: []
+[debug] [2025-11-03T12:35:55.854Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-03T12:35:55.856Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-03T12:35:55.990Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[debug] [2025-11-03T12:35:56.170Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-03T12:35:56.172Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-03T12:35:56.199Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T12:35:56.206Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:35:56.210Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T12:35:57.839Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T12:35:57.840Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[debug] [2025-11-03T12:36:02.205Z] W1103 12:36:02.195911     648 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W1103 12:36:02.195911     648 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\n"}}
+[debug] [2025-11-03T12:36:02.220Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-03T12:36:02.225Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-03T12:36:02.226Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-03T12:36:02.629Z] I1103 12:36:02.460909     653 load.go:31] Reloading schema and connectors...
+E1103 12:36:02.524864     653 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+E1103 12:36:02.524982     653 load.go:73] Could not load sources: 
+Errors: schema/schema.gql:56:6: Cannot redeclare type Mutation.
+I1103 12:36:02.529122     653 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] 
+I1103 12:36:02.529620     653 load.go:74] Finished reloading
+I1103 12:36:02.563757     653 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:36:02.460909     653 load.go:31] Reloading schema and connectors...\nE1103 12:36:02.524864     653 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\nE1103 12:36:02.524982     653 load.go:73] Could not load sources: \nErrors: schema/schema.gql:56:6: Cannot redeclare type Mutation.\nI1103 12:36:02.529122     653 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] \nI1103 12:36:02.529620     653 load.go:74] Finished reloading\nI1103 12:36:02.563757     653 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[error] [Firebase Plugin] error:  {}
+[debug] [2025-11-03T12:38:32.536Z] I1103 12:38:32.535469     653 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:38:32.535469     653 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2025-11-03T12:38:33.114Z] I1103 12:38:33.086708     653 control.go:94] [/emulator/happy-time afd9] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:38:33.086708     653 control.go:94] [/emulator/happy-time afd9] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-03T12:38:34.906Z] E1103 12:38:33.761787     653 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+I1103 12:38:33.805238     653 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] 
+I1103 12:38:33.805298     653 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1103 12:38:33.761787     653 load.go:95] Errors generating SDK: [connector \"example\"]: invalid Data Connect Connector no query found in connector\nI1103 12:38:33.805238     653 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] \nI1103 12:38:33.805298     653 load.go:109] Finished reloading\n"}}
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] ⚠  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2025-11-03T12:39:29.227Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2025-11-03T12:39:42.820Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T12:39:42.823Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T12:39:42.825Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T12:39:42.831Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:39:42.832Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:39:42.834Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T12:39:42.838Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:39:42.842Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T12:39:42.919Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[debug] [2025-11-03T12:39:43.552Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T12:39:43.553Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[info] i  dataconnect: downloading dataconnect-emulator-2.15.0... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-2.15.0..."}}
+[debug] [2025-11-03T12:39:44.587Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 
+[debug] [2025-11-03T12:39:46.222Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 200
+[debug] [2025-11-03T12:39:46.224Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 [stream]
+[info] i  dataconnect: Removing outdated emulator files: dataconnect-emulator-2.16.0 {"metadata":{"emulator":{"name":"dataconnect"},"message":"Removing outdated emulator files: dataconnect-emulator-2.16.0"}}
+[debug] [2025-11-03T12:39:49.441Z] I1103 12:39:49.369881    2019 control.go:94] [/emulator/happy-time 9367] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:39:49.369881    2019 control.go:94] [/emulator/happy-time 9367] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-03T12:39:49.445Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-03T12:39:49.446Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-03T12:39:49.448Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-03T12:39:49.576Z] I1103 12:39:49.574912    2025 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:39:49.574912    2025 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2025-11-03T12:39:49.780Z] I1103 12:39:49.780469    2025 control.go:94] [/emulator/happy-time 97a1] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:39:49.780469    2025 control.go:94] [/emulator/happy-time 97a1] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-03T12:39:49.942Z] E1103 12:39:49.940034    2025 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1103 12:39:49.940034    2025 load.go:95] Errors generating SDK: [connector \"example\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2025-11-03T12:39:49.966Z] I1103 12:39:49.942856    2025 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] main/relation.gql [27445B] 
+I1103 12:39:49.942965    2025 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:39:49.942856    2025 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] main/relation.gql [27445B] \nI1103 12:39:49.942965    2025 load.go:109] Finished reloading\n"}}
+[debug] [2025-11-03T12:39:49.983Z] I1103 12:39:49.967384    2025 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:39:49.967384    2025 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2025-11-03T12:39:50.925Z] I1103 12:39:50.157762    2025 engine.go:169] [/emulator/happy-time 97a1] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 12:39:50.157762    2025 engine.go:169] [/emulator/happy-time 97a1] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2025-11-03T12:42:39.820Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: true
+[debug] [2025-11-03T12:42:39.824Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T12:42:39.829Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T12:42:39.831Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T12:42:39.832Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: true
+[debug] [2025-11-03T12:42:39.835Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T12:42:39.840Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T12:42:39.843Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T12:42:39.848Z] Emulator locator file path: /tmp/hub-happytime6.json
+[debug] [2025-11-03T12:42:39.851Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:42:39.851Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:42:39.852Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[debug] [2025-11-03T12:42:39.853Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T12:42:39.854Z] Checked if tokens are valid: true, expires at: 1762176955173
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T12:42:39.855Z] Checked if tokens are valid: true, expires at: 1762176955173
+[debug] [2025-11-03T12:42:39.857Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T12:42:39.862Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T12:42:40.602Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T12:42:40.602Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-11-03T12:42:40.663Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T12:42:40.665Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] ✔  Wrote .gemini/extensions/firebase/gemini-extension.json 
+[info] ✔  Wrote .gemini/extensions/firebase/contexts/FIREBASE-BASE.md 
+[info] ✔  Wrote .gemini/extensions/firebase/FIREBASE.md 
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] ⚠  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2025-11-03T14:53:58.446Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2025-11-03T14:54:32.868Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T14:54:32.871Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T14:54:32.872Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T14:54:32.878Z] Checked if tokens are valid: false, expires at: 1762179939617
+[debug] [2025-11-03T14:54:32.879Z] Checked if tokens are valid: false, expires at: 1762179939617
+[debug] [2025-11-03T14:54:32.880Z] > refreshing access token with scopes: []
+[debug] [2025-11-03T14:54:32.883Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-03T14:54:32.884Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-03T14:54:32.959Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[debug] [2025-11-03T14:54:33.082Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-03T14:54:33.084Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-03T14:54:33.120Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T14:54:33.127Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T14:54:33.130Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T14:54:35.379Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T14:54:35.381Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[debug] [2025-11-03T14:54:38.848Z] I1103 14:54:38.790530   27612 control.go:94] [/emulator/happy-time 9f32] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:54:38.790530   27612 control.go:94] [/emulator/happy-time 9f32] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-03T14:54:38.851Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-03T14:54:38.851Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-03T14:54:38.852Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-03T14:54:39.045Z] I1103 14:54:38.932859   27618 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:54:38.932859   27618 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2025-11-03T14:54:39.164Z] I1103 14:54:39.157009   27618 control.go:94] [/emulator/happy-time f24b] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:54:39.157009   27618 control.go:94] [/emulator/happy-time f24b] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-03T14:54:39.338Z] E1103 14:54:39.337829   27618 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1103 14:54:39.337829   27618 load.go:95] Errors generating SDK: [connector \"example\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2025-11-03T14:54:39.350Z] I1103 14:54:39.342743   27618 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] 
+I1103 14:54:39.348032   27618 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:54:39.342743   27618 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] \nI1103 14:54:39.348032   27618 load.go:109] Finished reloading\n"}}
+[debug] [2025-11-03T14:54:39.405Z] I1103 14:54:39.404682   27618 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:54:39.404682   27618 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2025-11-03T14:54:39.579Z] I1103 14:54:39.576603   27618 engine.go:169] [/emulator/happy-time f24b] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:54:39.576603   27618 engine.go:169] [/emulator/happy-time f24b] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2025-11-03T14:59:01.715Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: true
+[debug] [2025-11-03T14:59:01.716Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T14:59:01.718Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T14:59:01.719Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T14:59:01.720Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T14:59:01.721Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T14:59:01.725Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T14:59:01.726Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T14:59:01.808Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: true
+[debug] [2025-11-03T14:59:01.809Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T14:59:01.810Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T14:59:01.811Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T14:59:01.813Z] Emulator locator file path: /tmp/hub-happytime6.json
+[debug] [2025-11-03T14:59:01.815Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T14:59:01.815Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T14:59:01.817Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T14:59:01.818Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T14:59:02.555Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T14:59:02.555Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-11-03T14:59:02.560Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T14:59:02.560Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-11-03T14:59:37.568Z] [Firebase Plugin] Received emulators started notification. Running detection.
+[debug] [2025-11-03T14:59:37.570Z] Emulator locator file path: /tmp/hub-happytime6.json
+[debug] [2025-11-03T14:59:37.570Z] Found emulator locator with different version: {"version":"14.23.0","origins":["http://127.0.0.1:4400"]}, CLI_VERSION: 14.20.0
+[debug] [2025-11-03T14:59:37.572Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2025-11-03T14:59:37.767Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2025-11-03T14:59:37.768Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"hosting":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"name":"hosting","host":"127.0.0.1","port":5000},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":28567,"timeout":10000}}
+[debug] [2025-11-03T14:59:37.974Z] I1103 14:59:37.972395   27618 engine.go:169] [/emulator/happy-time f24b] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 14:59:37.972395   27618 engine.go:169] [/emulator/happy-time f24b] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2025-11-03T15:09:59.605Z] I1103 15:09:59.367479   27618 load.go:31] Reloading schema and connectors...
+E1103 15:09:59.421004   27618 load.go:73] Could not load sources: 
+Errors: schema/schema.gql:85:6: Cannot redeclare type Query.
+I1103 15:09:59.424711   27618 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] prelude.gql [73219B] main/relation.gql [27445B] main/query.gql [6245B] 
+I1103 15:09:59.426849   27618 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 15:09:59.367479   27618 load.go:31] Reloading schema and connectors...\nE1103 15:09:59.421004   27618 load.go:73] Could not load sources: \nErrors: schema/schema.gql:85:6: Cannot redeclare type Query.\nI1103 15:09:59.424711   27618 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] prelude.gql [73219B] main/relation.gql [27445B] main/query.gql [6245B] \nI1103 15:09:59.426849   27618 load.go:74] Finished reloading\n"}}
+[debug] [2025-11-03T15:10:02.170Z] I1103 15:10:02.162782   27618 engine.go:169] [/emulator/happy-time f24b] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 15:10:02.162782   27618 engine.go:169] [/emulator/happy-time f24b] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[debug] [2025-11-03T15:16:05.202Z] [Firebase Plugin] Activating Firebase extension.
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] ⚠  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2025-11-03T15:17:02.719Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T15:17:02.722Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T15:17:02.723Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T15:17:02.730Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T15:17:02.732Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T15:17:02.734Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T15:17:02.738Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T15:17:02.743Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T15:17:02.823Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[info] i  dataconnect: downloading dataconnect-emulator-2.15.0... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-2.15.0..."}}
+[debug] [2025-11-03T15:17:04.722Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 
+[debug] [2025-11-03T15:17:05.242Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 200
+[debug] [2025-11-03T15:17:05.248Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 [stream]
+[debug] [2025-11-03T15:17:05.615Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T15:17:05.617Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  dataconnect: Removing outdated emulator files: dataconnect-emulator-2.16.0 {"metadata":{"emulator":{"name":"dataconnect"},"message":"Removing outdated emulator files: dataconnect-emulator-2.16.0"}}
+[debug] [2025-11-03T15:17:07.663Z] W1103 15:17:07.659567   32692 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W1103 15:17:07.659567   32692 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\n"}}
+[debug] [2025-11-03T15:17:07.666Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-03T15:17:07.666Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-03T15:17:07.667Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-03T15:17:07.740Z] I1103 15:17:07.740161   32697 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 15:17:07.740161   32697 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2025-11-03T15:17:07.753Z] E1103 15:17:07.753022   32697 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+E1103 15:17:07.753142   32697 load.go:73] Could not load sources: 
+Errors: schema/schema.gql:85:6: Cannot redeclare type Query.
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1103 15:17:07.753022   32697 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\nE1103 15:17:07.753142   32697 load.go:73] Could not load sources: \nErrors: schema/schema.gql:85:6: Cannot redeclare type Query.\n"}}
+[debug] [2025-11-03T15:17:07.757Z] I1103 15:17:07.756575   32697 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] 
+I1103 15:17:07.756776   32697 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/implicit.gql"
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 15:17:07.756575   32697 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] \nI1103 15:17:07.756776   32697 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/implicit.gql\"\n"}}
+[debug] [2025-11-03T15:17:07.759Z] I1103 15:17:07.758407   32697 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/input.gql"
+I1103 15:17:07.758518   32697 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/mutation.gql"
+I1103 15:17:07.758570   32697 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/query.gql"
+I1103 15:17:07.758621   32697 collector.go:114] schema extensions deleted obsolete file "/home/user/happy-time/dataconnect/.dataconnect/schema/main/relation.gql"
+I1103 15:17:07.758646   32697 load.go:74] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 15:17:07.758407   32697 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/input.gql\"\nI1103 15:17:07.758518   32697 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/mutation.gql\"\nI1103 15:17:07.758570   32697 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/query.gql\"\nI1103 15:17:07.758621   32697 collector.go:114] schema extensions deleted obsolete file \"/home/user/happy-time/dataconnect/.dataconnect/schema/main/relation.gql\"\nI1103 15:17:07.758646   32697 load.go:74] Finished reloading\n"}}
+[debug] [2025-11-03T15:17:07.870Z] I1103 15:17:07.869656   32697 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1103 15:17:07.869656   32697 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[error] [Firebase Plugin] error:  {}
+[debug] [2025-11-03T15:17:28.589Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: true
+[debug] [2025-11-03T15:17:28.591Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T15:17:28.592Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T15:17:28.592Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T15:17:28.593Z] [Firebase Plugin] Value of process.env.MONOSPACE_ENV: true
+[debug] [2025-11-03T15:17:28.594Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-03T15:17:28.594Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-03T15:17:28.595Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-03T15:17:28.596Z] Emulator locator file path: /tmp/hub-happytime6.json
+[debug] [2025-11-03T15:17:28.598Z] Found emulator locator with different version: {"version":"14.23.0","origins":["http://127.0.0.1:4400"]}, CLI_VERSION: 14.20.0
+[debug] [2025-11-03T15:17:28.599Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2025-11-03T15:17:28.603Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T15:17:28.604Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T15:17:28.604Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[debug] [2025-11-03T15:17:28.604Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T15:17:28.606Z] Checked if tokens are valid: true, expires at: 1762185272085
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-03T15:17:28.606Z] Checked if tokens are valid: true, expires at: 1762185272085
+[debug] [2025-11-03T15:17:28.607Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T15:17:28.609Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-03T15:17:28.758Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2025-11-03T15:17:28.760Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"hosting":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"name":"hosting","host":"127.0.0.1","port":5000},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":28567,"timeout":10000}}
+[debug] [2025-11-03T15:17:29.623Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T15:17:29.627Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-11-03T15:17:29.631Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-03T15:17:29.632Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[debug] [2025-11-04T08:45:16.369Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2025-11-04T08:46:11.231Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-04T08:46:11.234Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-04T08:46:11.235Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-04T08:46:11.240Z] Checked if tokens are valid: false, expires at: 1762185272085
+[debug] [2025-11-04T08:46:11.240Z] Checked if tokens are valid: false, expires at: 1762185272085
+[debug] [2025-11-04T08:46:11.241Z] > refreshing access token with scopes: []
+[debug] [2025-11-04T08:46:11.244Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-04T08:46:11.245Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-04T08:46:11.301Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[debug] [2025-11-04T08:46:11.462Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-04T08:46:11.463Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-04T08:46:11.486Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-04T08:46:11.488Z] Checked if tokens are valid: true, expires at: 1762249570464
+[debug] [2025-11-04T08:46:11.490Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-04T08:46:12.225Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-04T08:46:12.226Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[debug] [2025-11-04T08:46:17.537Z] W1104 08:46:17.528327     607 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"W1104 08:46:17.528327     607 build.go:56] Failed to construct deployment metadata: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\n"}}
+[debug] [2025-11-04T08:46:17.541Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-04T08:46:17.543Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-04T08:46:17.544Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-04T08:46:17.809Z] I1104 08:46:17.653432     612 load.go:31] Reloading schema and connectors...
+E1104 08:46:17.668220     612 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service "happy-time". No service has a schema.
+E1104 08:46:17.668327     612 load.go:73] Could not load sources: 
+Errors: schema/schema.gql:85:6: Cannot redeclare type Query.
+I1104 08:46:17.668958     612 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] 
+I1104 08:46:17.669017     612 load.go:74] Finished reloading
+I1104 08:46:17.709164     612 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 08:46:17.653432     612 load.go:31] Reloading schema and connectors...\nE1104 08:46:17.668220     612 load.go:63] Could not generate extensions: rpc error: code = NotFound desc = no schema found for service \"happy-time\". No service has a schema.\nE1104 08:46:17.668327     612 load.go:73] Could not load sources: \nErrors: schema/schema.gql:85:6: Cannot redeclare type Query.\nI1104 08:46:17.668958     612 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] \nI1104 08:46:17.669017     612 load.go:74] Finished reloading\nI1104 08:46:17.709164     612 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[error] [Firebase Plugin] error:  {}
+[debug] [2025-11-04T08:50:17.671Z] E1104 08:50:17.670252     612 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`
+E1104 08:50:17.670412     612 watch.go:102] watchAllDir unable to walk dir `/home/user/happy-time/dataconnect`: lstat /home/user/happy-time/dataconnect: no such file or directory
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1104 08:50:17.670252     612 watch.go:31] Failed to load config from \"/home/user/happy-time/dataconnect\": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`\nE1104 08:50:17.670412     612 watch.go:102] watchAllDir unable to walk dir `/home/user/happy-time/dataconnect`: lstat /home/user/happy-time/dataconnect: no such file or directory\n"}}
+[debug] [2025-11-04T08:50:27.679Z] E1104 08:50:27.678877     612 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1104 08:50:27.678877     612 watch.go:31] Failed to load config from \"/home/user/happy-time/dataconnect\": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`\n"}}
+[debug] [2025-11-04T08:50:37.671Z] E1104 08:50:37.670592     612 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1104 08:50:37.670592     612 watch.go:31] Failed to load config from \"/home/user/happy-time/dataconnect\": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`\n"}}
+[debug] [2025-11-04T08:50:47.671Z] E1104 08:50:47.670797     612 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1104 08:50:47.670797     612 watch.go:31] Failed to load config from \"/home/user/happy-time/dataconnect\": could not find dataconnect.yaml in `/home/user/happy-time/dataconnect`\n"}}
+[debug] [2025-11-04T08:50:57.697Z] I1104 08:50:57.680022     612 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 08:50:57.680022     612 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2025-11-04T08:50:57.962Z] I1104 08:50:57.960553     612 control.go:94] [/emulator/happy-time 23ad] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 08:50:57.960553     612 control.go:94] [/emulator/happy-time 23ad] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-04T08:50:58.153Z] E1104 08:50:58.153198     612 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1104 08:50:58.153198     612 load.go:95] Errors generating SDK: [connector \"example\"]: invalid Data Connect Connector no query found in connector\n"}}
+[debug] [2025-11-04T08:50:58.162Z] I1104 08:50:58.154933     612 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: prelude.gql [73219B] main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] 
+I1104 08:50:58.155002     612 load.go:109] Finished reloading
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 08:50:58.154933     612 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: prelude.gql [73219B] main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] \nI1104 08:50:58.155002     612 load.go:109] Finished reloading\n"}}
+[debug] [2025-11-04T08:51:32.141Z] [Firebase Plugin] Received emulators started notification. Running detection.
+[debug] [2025-11-04T08:51:32.143Z] Emulator locator file path: /tmp/hub-happytime6.json
+[debug] [2025-11-04T08:51:32.148Z] Found emulator locator with different version: {"version":"14.23.0","origins":["http://127.0.0.1:4400"]}, CLI_VERSION: 14.20.0
+[debug] [2025-11-04T08:51:32.153Z] >>> [apiv2][query] GET http://127.0.0.1:4400/emulators [none]
+[debug] [2025-11-04T08:51:32.415Z] <<< [apiv2][status] GET http://127.0.0.1:4400/emulators 200
+[debug] [2025-11-04T08:51:32.416Z] <<< [apiv2][body] GET http://127.0.0.1:4400/emulators {"hub":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4400}],"name":"hub","host":"127.0.0.1","port":4400},"logging":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"name":"logging","host":"127.0.0.1","port":4500},"hosting":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":5000}],"name":"hosting","host":"127.0.0.1","port":5000},"dataconnect":{"listen":[{"address":"127.0.0.1","family":"IPv4","port":9399}],"name":"dataconnect","host":"127.0.0.1","port":9399,"pid":2260,"timeout":10000}}
+[debug] [2025-11-04T08:51:32.849Z] I1104 08:51:32.845509     612 engine.go:169] [/emulator/happy-time 23ad] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 08:51:32.845509     612 engine.go:169] [/emulator/happy-time 23ad] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}
+[info] [Firebase Plugin] Stopping Data Connect toolkit
+[warn] ⚠  Data Connect Emulator has exited upon receiving signal: SIGINT 
+[debug] [2025-11-04T12:38:35.776Z] [Firebase Plugin] Activating Firebase extension.
+[debug] [2025-11-04T12:39:33.511Z] [Firebase Plugin] requireAuthWrapper
+[debug] [2025-11-04T12:39:33.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-04T12:39:33.514Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-04T12:39:33.521Z] Checked if tokens are valid: false, expires at: 1762249570464
+[debug] [2025-11-04T12:39:33.522Z] Checked if tokens are valid: false, expires at: 1762249570464
+[debug] [2025-11-04T12:39:33.523Z] > refreshing access token with scopes: []
+[debug] [2025-11-04T12:39:33.527Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-11-04T12:39:33.528Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-04T12:39:33.612Z] [Firebase Plugin] VSCode notification server listening on port 40001
+[debug] [2025-11-04T12:39:34.440Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-11-04T12:39:34.442Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-11-04T12:39:34.476Z] [Firebase Plugin] User found:  happy.time.shopping25@gmail.com
+[info] [Firebase Plugin] (Core:Project) New user detected, fetching projects
+[debug] [2025-11-04T12:39:34.479Z] Checked if tokens are valid: true, expires at: 1762263573446
+[debug] [2025-11-04T12:39:34.480Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=1000
+[debug] [2025-11-04T12:39:35.181Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2025-11-04T12:39:35.182Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] [Firebase Plugin] Starting Data Connect toolkit (version 2.15.0) on port 50001
+[info] i  dataconnect: downloading dataconnect-emulator-2.15.0... {"metadata":{"emulator":{"name":"dataconnect"},"message":"downloading dataconnect-emulator-2.15.0..."}}
+[debug] [2025-11-04T12:39:37.938Z] >>> [apiv2][query] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 
+[debug] [2025-11-04T12:39:38.535Z] <<< [apiv2][status] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 200
+[debug] [2025-11-04T12:39:38.537Z] <<< [apiv2][body] GET https://storage.googleapis.com/firemat-preview-drop/emulator/dataconnect-emulator-linux-v2.15.0 [stream]
+[info] i  dataconnect: Removing outdated emulator files: dataconnect-emulator-2.16.0 {"metadata":{"emulator":{"name":"dataconnect"},"message":"Removing outdated emulator files: dataconnect-emulator-2.16.0"}}
+[debug] [2025-11-04T12:41:01.251Z] I1104 12:41:01.106193     923 control.go:94] [/emulator/happy-time 770c] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 12:41:01.106193     923 control.go:94] [/emulator/happy-time 770c] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-04T12:41:01.266Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2025-11-04T12:41:01.271Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"dataconnect"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2025-11-04T12:41:01.275Z] Starting Data Connect Emulator with command {"binary":"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0","args":["--logtostderr","-v=2","dev","--listen=localhost:50001","--config_dir=/home/user/happy-time/dataconnect","--enable_output_schema_extensions=true","--enable_output_generated_sdk=true"],"optionalArgs":["listen","config_dir","enable_output_schema_extensions","enable_output_generated_sdk"],"joinArgs":true,"shell":false,"port":9399} {"metadata":{"emulator":{"name":"dataconnect"},"message":"Starting Data Connect Emulator with command {\"binary\":\"/home/user/.cache/firebase/emulators/dataconnect-emulator-2.15.0\",\"args\":[\"--logtostderr\",\"-v=2\",\"dev\",\"--listen=localhost:50001\",\"--config_dir=/home/user/happy-time/dataconnect\",\"--enable_output_schema_extensions=true\",\"--enable_output_generated_sdk=true\"],\"optionalArgs\":[\"listen\",\"config_dir\",\"enable_output_schema_extensions\",\"enable_output_generated_sdk\"],\"joinArgs\":true,\"shell\":false,\"port\":9399}"}}
+[info] i  dataconnect: Data Connect Emulator logging to dataconnect-debug.log {"metadata":{"emulator":{"name":"dataconnect"},"message":"Data Connect Emulator logging to dataconnect-debug.log"}}
+[debug] [2025-11-04T12:41:01.915Z] I1104 12:41:01.763244     930 load.go:31] Reloading schema and connectors...
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 12:41:01.763244     930 load.go:31] Reloading schema and connectors...\n"}}
+[debug] [2025-11-04T12:41:02.072Z] I1104 12:41:02.052282     930 control.go:94] [/emulator/happy-time 2868] UpdateResources(): done
+Main schema: sources: schema/schema.gql [842B] 
+Connector "example": sources: 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 12:41:02.052282     930 control.go:94] [/emulator/happy-time 2868] UpdateResources(): done\nMain schema: sources: schema/schema.gql [842B] \nConnector \"example\": sources: \n"}}
+[debug] [2025-11-04T12:41:02.469Z] E1104 12:41:02.417889     930 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+I1104 12:41:02.430160     930 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] prelude.gql [73219B] main/relation.gql [27445B] 
+I1104 12:41:02.430459     930 load.go:109] Finished reloading
+I1104 12:41:02.444868     930 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"E1104 12:41:02.417889     930 load.go:95] Errors generating SDK: [connector \"example\"]: invalid Data Connect Connector no query found in connector\nI1104 12:41:02.430160     930 collector.go:107] schema extensions wrote into \"/home/user/happy-time/dataconnect/.dataconnect/schema\"\nGenerated sources: main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] prelude.gql [73219B] main/relation.gql [27445B] \nI1104 12:41:02.430459     930 load.go:109] Finished reloading\nI1104 12:41:02.444868     930 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001\n"}}
+[debug] [2025-11-04T12:41:03.660Z] I1104 12:41:03.649563     930 engine.go:169] [/emulator/happy-time 2868] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+ {"metadata":{"emulator":{"name":"dataconnect"},"message":"I1104 12:41:03.649563     930 engine.go:169] [/emulator/happy-time 2868] ExecuteGraphqlRead IntrospectionQuery: succeeded. \n"}}

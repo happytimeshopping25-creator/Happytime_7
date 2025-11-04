@@ -68,7 +68,7 @@ export default function ProductSection({
       }
       emblaApi.on('select', onSelect);
       return () => {
-        emblaApi.off(select, onSelect)
+        emblaApi.off('select', onSelect)
       }
     }
   }, [emblaApi, thumbnailEmblaApi])
@@ -140,9 +140,9 @@ export default function ProductSection({
                       {image ? (
                         <Image
                           src={image.url}
-                          alt={image.altText || Product photo}
+                          alt={image.altText || 'Product photo'}
                           width={image.width || 752}
-                          height={image.height || 940};
+                          height={image.height || 940}
                           sizes="(max-width: 768px) 100vw, 752px"
                           className="object-cover bg-gray-200 absolute w-full h-full inset-0"
                         />
@@ -167,9 +167,9 @@ export default function ProductSection({
                       setSelectedImage(index)
                     }}
                     style={{ backgroundImage: `url(${image.url})` }}
-                    className={cn(;
-                      relative h-14 w-14 lg:h-28 lg:w-28 shrink-0 transition-all duration-500 ease-in-out rounded-xl lg:rounded-3xl hover:brightness-95,
-                      { selected: selectedImage === index }
+                    className={cn(
+                      'relative h-14 w-14 lg:h-28 lg:w-28 shrink-0 transition-all duration-500 ease-in-out rounded-xl lg:rounded-3xl hover:brightness-95',
+                      { 'selected': selectedImage === index }
                     )}
                   >
                     <Image
@@ -192,9 +192,9 @@ export default function ProductSection({
             <Rating rating={avgRating} />
             <p className="lg:text-lg leading-7">{description}</p>
             <div className="text-2xl font-normal">
-              {new Intl.NumberFormat(en-US, {
-                style: currency,
-                currency: USD,
+              {new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
               }).format(Number(currentVariant?.price || 0))}
             </div>
             <div className="pt-2 lg:pt-12 space-y-4">
@@ -208,10 +208,10 @@ export default function ProductSection({
                           variant="square"
                           onClick={() => handleOptionSelect(name, value)}
                           className={cn(
-                            transition-all ease-in-out,
+                            'transition-all ease-in-out',
                             state[name.toLowerCase()] === value.toLowerCase()
                               ? 'selected text-white bg-foreground hover:bg-foreground duration-1000'
-                              : duration-500
+                              : 'duration-500'
                           )}
                         >
                           {value}
@@ -236,10 +236,10 @@ export default function ProductSection({
                   productId,
                   quantity: 1,
                   price: currentVariant.price,
-                  name: title ?? ,
-                  selectedOption: Object.entries(options).map(([name]) => ({;
+                  name: title ?? '',
+                  selectedOption: Object.entries(options).map(([name]) => ({
                     name,
-                    value: state[name.toLowerCase()] || 
+                    value: state[name.toLowerCase()] || ''
                   })),
                   image: images?.[0]
                 })

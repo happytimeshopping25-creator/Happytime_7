@@ -1,0 +1,50 @@
+extend type Order {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Order", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Order`.`customer`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  customerId: UUID! @fdc_generated(from: "Order.customer", purpose: IMPLICIT_REF_FIELD)
+}
+extend type OrderItem {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "OrderItem", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `OrderItem`.`order`. It must match the value of `Order`.`id`. See `@ref` for how to customize it.
+  """
+  orderId: UUID! @fdc_generated(from: "OrderItem.order", purpose: IMPLICIT_REF_FIELD)
+  """
+  ✨ Implicit foreign key field based on `OrderItem`.`product`. It must match the value of `Product`.`id`. See `@ref` for how to customize it.
+  """
+  productId: UUID! @fdc_generated(from: "OrderItem.product", purpose: IMPLICIT_REF_FIELD)
+}
+extend type Product {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Product", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Product`.`vendor`. It must match the value of `Vendor`.`id`. See `@ref` for how to customize it.
+  """
+  vendorId: UUID! @fdc_generated(from: "Product.vendor", purpose: IMPLICIT_REF_FIELD)
+}
+extend type User {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "User", purpose: IMPLICIT_KEY_FIELD)
+}
+extend type Vendor {
+  """
+  ✨ Implicit primary key field. It's a UUID column default to a generated new value. See `@table` for how to customize it.
+  """
+  id: UUID! @default(expr: "uuidV4()") @fdc_generated(from: "Vendor", purpose: IMPLICIT_KEY_FIELD)
+  """
+  ✨ Implicit foreign key field based on `Vendor`.`user`. It must match the value of `User`.`id`. See `@ref` for how to customize it.
+  """
+  userId: UUID! @fdc_generated(from: "Vendor.user", purpose: IMPLICIT_REF_FIELD)
+}
