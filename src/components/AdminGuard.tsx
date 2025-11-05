@@ -1,53 +1,62 @@
-'use client';
+"use client"
 
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '@/lib/firebase';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import type { ReactNode } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { doc, getDoc } from 'firebase/firestore'
 
-// This is a placeholder for a real admin check. 
-// In a real app, you would fetch user claims or check a database.
-async function isAdmin(uid: string): Promise<boolean> {
-  console.log('Checking admin status for UID:', uid);
-  // For now, let's assume the first user is the admin for demonstration.
-  // Replace this with your actual admin logic.
-  return uid === 'REPLACE_WITH_YOUR_ADMIN_UID'; 
-}
+import { useAuth } from '@/components/AuthProvider'
+import { db } from '@/lib/firestore'
 
-export default function AdminGuard({ children }: { children: React.ReactNode }) {
-  const [user, loading] = useAuthState(auth);
-  const router = useRouter();
-  const [isAdminUser, setIsAdminUser] = useState<boolean | null>(null);
+export default function AdminGuard({ children }: { children: ReactNode }) {
+  const { user, loading } = useAuth()
+  const router = useRouter()
+  const [authorized, setAuthorized] = useState(false)
+  const [checking, setChecking] = useState(true)
 
   useEffect(() => {
-    if (loading) {
-      return; // Wait until user auth state is loaded
-    }
-
+    if (loading) return
     if (!user) {
-      router.replace('/login'); // Redirect to login if not authenticated
-      return;
+      setAuthorized(false)
+      setChecking(false)
+      router.replace('/signin')
+      return
     }
 
-    isAdmin(user.uid).then(status => {
-      setIsAdminUser(status);
-      if (!status) {
-        router.replace('/'); // Redirect to home if not an admin
+    let cancelled = false
+    const verify = async () => {
+      try {
+        const snap = await getDoc(doc(db, 'users', user.uid))
+        const role = snap.exists() ? (snap.data() as any).role : null
+        if (!cancelled) {
+          if (role === 'admin') {
+            setAuthorized(true)
+          } else {
+            setAuthorized(false)
+            router.replace('/')
+          }
+        }
+      } finally {
+        if (!cancelled) setChecking(false)
       }
-    });
+    }
 
-  }, [user, loading, router]);
+    verify()
 
-  // Render a loading state while checking for admin status
-  if (loading || isAdminUser === null) {
-    return <div>Loading...</div>; 
+    return () => {
+      cancelled = true
+    }
+  }, [user, loading, router])
+
+  if (loading || checking) {
+    return (
+      <div className="flex h-[60vh] items-center justify-center text-gray-500">
+        جار التحقق من صلاحيات الوصول...
+      </div>
+    )
   }
 
-  // If the user is an admin, render the children
-  if (isAdminUser) {
-    return <>{children}</>;
-  }
+  if (!authorized) return null
 
-  // Otherwise, render nothing (or a fallback UI)
-  return null;
+  return <>{children}</>
 }

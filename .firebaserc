@@ -1,7 +1,5 @@
 {
   "projects": {
     "default": "happytime6"
-  },
-  "targets": {},
-  "etags": {}
+  }
 }

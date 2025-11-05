@@ -1,10 +1,109 @@
-I1104 12:41:01.763244     930 load.go:31] Reloading schema and connectors...
-I1104 12:41:02.052282     930 control.go:94] [/emulator/happy-time 2868] UpdateResources(): done
+E1105 14:48:00.399601   10692 dev.go:79] Failed to load initial config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+I1105 14:48:00.447060   10692 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+E1105 14:48:10.412605   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:48:20.411940   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:48:30.402497   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:48:40.414201   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:48:50.410329   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:49:00.403344   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:49:10.411121   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:49:20.415022   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:49:30.401649   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:49:40.410180   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:49:50.410572   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:50:00.401568   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:50:10.410243   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:50:20.411194   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:50:30.402563   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:50:40.410483   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:50:50.409930   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:51:00.402487   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:51:10.404725   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:51:20.410280   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:51:30.401845   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:51:40.410372   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:51:50.409814   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:52:00.401566   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:52:10.409869   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:52:20.409835   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:52:30.402397   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:52:40.409860   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:52:50.402203   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:53:00.402657   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:53:10.405305   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:53:20.401669   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:53:30.402396   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:53:40.410723   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:53:50.757096   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:54:00.427576   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:54:10.411064   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:54:20.411226   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:54:30.402499   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:54:40.409754   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:54:50.412828   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:55:00.402023   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:55:10.411234   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:55:20.411255   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:55:30.401515   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:55:40.401708   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:55:50.554413   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:56:00.401818   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+E1105 14:56:10.410272   10692 watch.go:31] Failed to load config from "/home/user/happy-time/dataconnect": could not unmarshal dataconnect.yaml at `/home/user/happy-time/dataconnect/dataconnect.yaml`: yaml: unmarshal errors:
+  line 4: cannot unmarshal !!str `schema/...` into config.Schema
+I1105 14:56:20.414210   10692 load.go:31] Reloading schema and connectors...
+I1105 14:56:21.162507   10692 control.go:94] [/emulator/happy-time 2936] UpdateResources(): done
 Main schema: sources: schema/schema.gql [842B] 
 Connector "example": sources: 
-E1104 12:41:02.417889     930 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
-I1104 12:41:02.430160     930 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
-Generated sources: main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] prelude.gql [73219B] main/relation.gql [27445B] 
-I1104 12:41:02.430459     930 load.go:109] Finished reloading
-I1104 12:41:02.444868     930 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
-I1104 12:41:03.649563     930 engine.go:169] [/emulator/happy-time 2868] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+E1105 14:56:21.524091   10692 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+I1105 14:56:21.562029   10692 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: main/input.gql [54471B] main/relation.gql [27445B] main/query.gql [6245B] main/mutation.gql [16770B] prelude.gql [73219B] main/implicit.gql [2485B] 
+I1105 14:56:21.565121   10692 load.go:109] Finished reloading

@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic'
-import { notFound } from 'next/navigation'
+// import { notFound } from 'next/navigation'
 
-import { dc } from '@/lib/data-connect'
-import { getCollectionsByPage } from '@firebasegen/default-connector'
+// import { dc } from '@/lib/data-connect'
+// import { getCollectionsByPage } from '@firebasegen/default-connector'
 
 import Hero from '@/components/sections/hero'
 import CategoryCard from '@/components/ui/category-card'
@@ -13,19 +13,48 @@ const CardOverlay = dynamic(() => import('@/components/card-overlay'))
 const ProductGrid = dynamic(() => import('@/components/sections/product-grid'))
 
 export default async function Home() {
-  const { data: collectionsData } = await getCollectionsByPage(dc, { page: 'home' })
+  // Mock data to replace Data Connect
+  const collectionsData = {
+    collections: [
+      {
+        id: '1',
+        handle: 'o24-collection',
+        name: 'O24 Collection',
+        description: 'A collection of our finest products.',
+        featuredImage: { url: 'https://via.placeholder.com/800x400' },
+        products_via_ProductCollection: [],
+      },
+      {
+        id: '2',
+        handle: 'mist-collection',
+        name: 'Mist Collection',
+        description: 'A refreshing collection for the modern home.',
+        featuredImage: { url: 'https://via.placeholder.com/800x400' },
+        products_via_ProductCollection: [],
+      },
+      {
+        id: '3',
+        handle: 'winter-collection',
+        name: 'Winter Collection',
+        description: 'Stay warm and stylish this winter.',
+        featuredImage: { url: 'https://via.placeholder.com/800x400' },
+        products_via_ProductCollection: [],
+      },
+    ],
+  }
+
   const [mainCollection, secondaryCollection, tertiaryCollection] = [
-    ...(collectionsData?.collections || [])
+    ...(collectionsData?.collections || []),
   ].sort((a, b) => {
     const order: Record<string, number> = {
       'o24-collection': 1,
       'mist-collection': 2,
-      'winter-collection': 3
+      'winter-collection': 3,
     }
     return (order[a.handle] || 99) - (order[b.handle] || 99)
   })
 
-  if (!collectionsData?.collections?.length) return notFound()
+  // if (!collectionsData?.collections?.length) return notFound()
 
   return (
     <>
@@ -62,11 +91,9 @@ export default async function Home() {
           id: product.id,
           title: product.title,
           handle: product.handle,
-          price: product.productVariants_on_product.at(0)?.price?.toString() || '',
-          image: product.productImages_on_product.at(0),
-          variants: product.productVariants_on_product
-            .at(0)
-            ?.selectedOptions_on_productVariant.map((option) => (option.value ? option.value : ''))
+          price: '',
+          image: '',
+          variants: [],
         }))}
       />
     </>

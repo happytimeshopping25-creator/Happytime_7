@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "_rsc_components_sections_details_tsx";
+exports.ids = ["_rsc_components_sections_details_tsx"];
+exports.modules = {
+
+/***/ "(rsc)/./components/sections/details.tsx":
+/*!*****************************************!*\
+  !*** ./components/sections/details.tsx ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Details)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(rsc)/../node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Details({ title, body }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n        className: \"text-foreground bg-background py-10 lg:p-20\",\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n            className: \"relative container flex max-lg:flex-col gap-4 lg:gap-32 max-w-6xl\",\n            children: [\n                title ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                    className: \"text-gray-400 text-xs lg:mr-auto\",\n                    children: title\n                }, void 0, false, {\n                    fileName: \"/home/user/happy-time/src/components/sections/details.tsx\",\n                    lineNumber: 11,\n                    columnNumber: 18\n                }, this) : null,\n                body ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                    className: \"text-xl lg:text-3xl max-w-4xl\",\n                    children: body\n                }, void 0, false, {\n                    fileName: \"/home/user/happy-time/src/components/sections/details.tsx\",\n                    lineNumber: 12,\n                    columnNumber: 17\n                }, this) : null\n            ]\n        }, void 0, true, {\n            fileName: \"/home/user/happy-time/src/components/sections/details.tsx\",\n            lineNumber: 10,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/home/user/happy-time/src/components/sections/details.tsx\",\n        lineNumber: 9,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9jb21wb25lbnRzL3NlY3Rpb25zL2RldGFpbHMudHN4IiwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFNZSxTQUFTQSxRQUFRLEVBQUVDLEtBQUssRUFBRUMsSUFBSSxFQUFXO0lBQ3RELHFCQUNFLDhEQUFDQztRQUFRQyxXQUFVO2tCQUNqQiw0RUFBQ0M7WUFBSUQsV0FBVTs7Z0JBQ1pILHNCQUFRLDhEQUFDSztvQkFBR0YsV0FBVTs4QkFBb0NIOzs7OzsyQkFBYztnQkFDeEVDLHFCQUFPLDhEQUFDSztvQkFBRUgsV0FBVTs4QkFBaUNGOzs7OzsyQkFBWTs7Ozs7Ozs7Ozs7O0FBSTFFIiwic291cmNlcyI6WyIvaG9tZS91c2VyL2hhcHB5LXRpbWUvc3JjL2NvbXBvbmVudHMvc2VjdGlvbnMvZGV0YWlscy50c3giXSwic291cmNlc0NvbnRlbnQiOlsidHlwZSBEZXRhaWxzID0ge1xuICBpZD86IHN0cmluZ1xuICB0aXRsZTogc3RyaW5nXG4gIGJvZHk6IHN0cmluZ1xufVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBEZXRhaWxzKHsgdGl0bGUsIGJvZHkgfTogRGV0YWlscykge1xuICByZXR1cm4gKFxuICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cInRleHQtZm9yZWdyb3VuZCBiZy1iYWNrZ3JvdW5kIHB5LTEwIGxnOnAtMjBcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgY29udGFpbmVyIGZsZXggbWF4LWxnOmZsZXgtY29sIGdhcC00IGxnOmdhcC0zMiBtYXgtdy02eGxcIj5cbiAgICAgICAge3RpdGxlID8gPGgyIGNsYXNzTmFtZT1cInRleHQtZ3JheS00MDAgdGV4dC14cyBsZzptci1hdXRvXCI+e3RpdGxlfTwvaDI+IDogbnVsbH1cbiAgICAgICAge2JvZHkgPyA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhsIGxnOnRleHQtM3hsIG1heC13LTR4bFwiPntib2R5fTwvcD4gOiBudWxsfVxuICAgICAgPC9kaXY+XG4gICAgPC9zZWN0aW9uPlxuICApXG59XG4iXSwibmFtZXMiOlsiRGV0YWlscyIsInRpdGxlIiwiYm9keSIsInNlY3Rpb24iLCJjbGFzc05hbWUiLCJkaXYiLCJoMiIsInAiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./components/sections/details.tsx\n");
+
+/***/ })
+
+};
+;
