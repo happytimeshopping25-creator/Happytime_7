@@ -133,13 +133,11 @@ if git rev-parse --is-inside-work-tree &> /dev/null; then
   else
     echo -e "${GREEN}✓ لا توجد تغييرات غير ملتزمة.${NC}"
   fi
-  echo "\"branch\": \"$BRANCH\"," >> "$REPORT_JSON.tmp"
-  echo "\"changes\": $CHANGES" >> "$REPORT_JSON.tmp"
+  echo "\"branch\": \"$BRANCH\",\n\"changes\": $CHANGES\n}" >> "$REPORT_JSON.tmp"
 else
   echo -e "${RED}⚠️ المشروع ليس داخل مستودع Git.${NC}"
-  echo "\"branch\": null,\n\"changes\": null" >> "$REPORT_JSON.tmp"
+  echo "\"branch\": null,\n\"changes\": null\n}" >> "$REPORT_JSON.tmp"
 fi
-echo "}" >> "$REPORT_JSON.tmp"
 
 # إغلاق JSON
 echo "}" >> "$REPORT_JSON.tmp"
