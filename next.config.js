@@ -36,3 +36,7 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+
+// Recommended images/domains (added by analyzer):
+// images: { domains: ['via.placeholder.com'] }

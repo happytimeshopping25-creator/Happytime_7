@@ -1,0 +1,108 @@
+[
+  // =========================
+  // 🌐 Firebase & Google APIs
+  // =========================
+  "https://firebase.google.com",
+  "https://console.firebase.google.com",
+  "https://auth.firebase.tools",
+  "https://*.firebaseapp.com",
+  "https://*.web.app",
+  "https://*.cloudfunctions.net",
+  "https://*.cloudworkstations.dev",
+  "https://*.googleapis.com",
+  "https://*.google.com",
+  "https://accounts.google.com",
+  "https://apis.google.com",
+  "https://oauth2.googleapis.com",
+
+  // =========================
+  // 🔐 Authentication & OAuth
+  // =========================
+  "https://auth.openai.com",
+  "https://login.openai.com",
+  "https://*.github.com",
+  "https://github.com",
+  "https://accounts.google.com",
+  "https://appleid.apple.com",
+  "https://id.twitch.tv",
+  "https://discord.com",
+  "https://discordapp.com",
+  "https://facebook.com",
+  "https://www.facebook.com",
+
+  // =========================
+  // 💻 Development & Localhost
+  // =========================
+  "http://localhost",
+  "http://localhost:*",
+  "http://127.0.0.1:*",
+  "http://0.0.0.0:*",
+  "https://0.0.0.0:*",
+
+  // =========================
+  // 🧱 Frameworks & Package Docs
+  // =========================
+  "https://nextjs.org",
+  "https://react.dev",
+  "https://reactjs.org",
+  "https://tailwindcss.com",
+  "https://vercel.com",
+  "https://developer.mozilla.org",
+  "https://www.typescriptlang.org",
+
+  // =========================
+  // 🧰 Tools & IDEs
+  // =========================
+  "https://open-vsx.org",
+  "https://marketplace.visualstudio.com",
+  "https://code.visualstudio.com",
+  "https://idx.dev",
+  "https://*.idx.dev",
+  "https://g.co",
+  "https://console.cloud.google.com",
+
+  // =========================
+  // 🤖 APIs & AI Integrations
+  // =========================
+  "https://api.openai.com",
+  "https://platform.openai.com",
+  "https://*.openai.com",
+  "https://huggingface.co",
+  "https://api.huggingface.co",
+
+  // =========================
+  // 🧪 Cloud & Hosting
+  // =========================
+  "https://cloud.google.com",
+  "https://console.cloud.google.com",
+  "https://storage.googleapis.com",
+  "https://firebasestorage.googleapis.com",
+  "https://supabase.com",
+  "https://*.supabase.co",
+
+  // =========================
+  // 🚀 Deployment & CI/CD
+  // =========================
+  "https://vercel.app",
+  "https://*.vercel.app",
+  "https://render.com",
+  "https://railway.app",
+  "https://github.dev",
+  "https://codesandbox.io",
+
+  // =========================
+  // 🧩 Miscellaneous
+  // =========================
+  "https://fonts.googleapis.com",
+  "https://fonts.gstatic.com",
+  "https://cdn.jsdelivr.net",
+  "https://unpkg.com",
+  "https://images.unsplash.com",
+  "https://via.placeholder.com",
+  "https://placehold.co",
+
+  // =========================
+  // 🛡️ Optional Wildcard — enable only if you trust all dev sources
+  // =========================
+  // "*"
+]

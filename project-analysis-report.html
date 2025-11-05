@@ -1,0 +1,803 @@
+
+<html>
+<head><meta charset="utf-8"><title>Project Analysis Report</title></head>
+<body style="font-family: sans-serif">
+  <h1>تقرير تحليل المشروع</h1>
+  <p>المشروع: /home/user/happy-time</p>
+  <p>الوقت: 2025-11-05T15:28:55.698Z</p>
+  <h2>ملخص المشاكل والتوصيات</h2>
+  <ul>
+    <li><strong>[warning]</strong> لم يتم تكوين images.domains في next.config.js — سيمنع استخدام مضيفين خارجيين لخاصية next/image.</li>
+<li><strong>[info]</strong> نسخة Next.js المحددة: ^15.5.6</li>
+<li><strong>[info]</strong> يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/.next/server/app/page.js. تأكد من إضافة hostname في next.config.js.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/.next/server/app/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/.next/server/app/page_client-reference-manifest.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/.next/server/vendor-chunks/@firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/.next/server/vendor-chunks/firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/.next/static/chunks/app/layout.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/apps/mobile/app/_layout.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/apps/mobile/app/orders.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/apps/mobile/src/AuthProvider.native.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[error]</strong> تم العثور على استعمال prop قديم "layout" مع next/image في الملف /home/user/happy-time/firebase-analyze.js. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill).</li>
+<li><strong>[info]</strong> يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/firebase-analyze.js. تأكد من إضافة hostname في next.config.js.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/firebase-analyze.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/(auth)/login/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/_not-found/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/_not-found/page_client-reference-manifest.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/about/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/admin/orders/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/auth/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/contact/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/dashboard/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/orders/[id]/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/orders/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/src/.next/server/app/page.js. تأكد من إضافة hostname في next.config.js.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/page_client-reference-manifest.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/signin/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/signup/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/chunks/322.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/chunks/39.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/chunks/533.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/vendor-chunks/@firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/vendor-chunks/firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/chunks/app/layout.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/webpack/app/layout.a3ce9f28d270dcdd.hot-update.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/webpack/app/layout.a6ebe1be26891cd5.hot-update.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/webpack/app/layout.d47abe5d04ac1a8b.hot-update.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/app/(auth)/login/page.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/app/checkout/page.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/app/layout.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/app/orders/page.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/src/app/page.tsx. تأكد من إضافة hostname في next.config.js.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/AdminGuard.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/AuthProvider.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/EnableNotifications.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/EnableNotificationsButton.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/auth/GoogleSignIn.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[error]</strong> تم العثور على استعمال prop قديم "layout" مع next/image في الملف /home/user/happy-time/src/components/card-overlay/card-overlay-center.tsx. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill).</li>
+<li><strong>[error]</strong> تم العثور على استعمال prop قديم "layout" مع next/image في الملف /home/user/happy-time/src/components/card-overlay/card-overlay-right.tsx. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill).</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/layout/header/index.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/components/sections/cart-section/index.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+<li><strong>[error]</strong> تم العثور على استعمال prop قديم "layout" مع next/image في الملف /home/user/happy-time/src/components/sections/hero.tsx. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill).</li>
+<li><strong>[info]</strong> تم العثور على AuthProvider في /home/user/happy-time/src/lib/firebase.ts — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب.</li>
+  </ul>
+  <h2>أحداث مفصّلة</h2>
+  <pre>{
+  "meta": {
+    "projectRoot": "/home/user/happy-time",
+    "timestamp": "2025-11-05T15:28:55.698Z",
+    "node_version": "v20.18.1",
+    "fixMode": true
+  },
+  "filesFound": {
+    "nextConfig": true,
+    "packageJson": true,
+    "firebaseJson": true,
+    "envLocal": true
+  },
+  "issues": [
+    {
+      "id": "next-config-images",
+      "level": "warning",
+      "message": "لم يتم تكوين images.domains في next.config.js — سيمنع استخدام مضيفين خارجيين لخاصية next/image."
+    },
+    {
+      "id": "next-version",
+      "level": "info",
+      "message": "نسخة Next.js المحددة: ^15.5.6"
+    },
+    {
+      "id": "uses-via-placeholder",
+      "level": "info",
+      "message": "يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/.next/server/app/page.js. تأكد من إضافة hostname في next.config.js."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/.next/server/app/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/.next/server/app/page_client-reference-manifest.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/.next/server/vendor-chunks/@firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/.next/server/vendor-chunks/firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/.next/static/chunks/app/layout.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/apps/mobile/app/_layout.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/apps/mobile/app/orders.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/apps/mobile/src/AuthProvider.native.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "legacy-layout",
+      "level": "error",
+      "message": "تم العثور على استعمال prop قديم \"layout\" مع next/image في الملف /home/user/happy-time/firebase-analyze.js. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill)."
+    },
+    {
+      "id": "uses-via-placeholder",
+      "level": "info",
+      "message": "يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/firebase-analyze.js. تأكد من إضافة hostname في next.config.js."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/firebase-analyze.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/(auth)/login/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/_not-found/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/_not-found/page_client-reference-manifest.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/about/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/admin/orders/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/auth/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/contact/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/dashboard/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/orders/[id]/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/orders/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "uses-via-placeholder",
+      "level": "info",
+      "message": "يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/src/.next/server/app/page.js. تأكد من إضافة hostname في next.config.js."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/page_client-reference-manifest.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/signin/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/app/signup/page.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/chunks/322.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/chunks/39.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/chunks/533.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/vendor-chunks/@firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/server/vendor-chunks/firebase.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/chunks/app/layout.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/webpack/app/layout.a3ce9f28d270dcdd.hot-update.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/webpack/app/layout.a6ebe1be26891cd5.hot-update.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/.next/static/webpack/app/layout.d47abe5d04ac1a8b.hot-update.js — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/app/(auth)/login/page.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/app/checkout/page.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/app/layout.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/app/orders/page.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "uses-via-placeholder",
+      "level": "info",
+      "message": "يوجد إشارة إلى via.placeholder.com في /home/user/happy-time/src/app/page.tsx. تأكد من إضافة hostname في next.config.js."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/AdminGuard.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/AuthProvider.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/EnableNotifications.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/EnableNotificationsButton.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/auth/GoogleSignIn.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "legacy-layout",
+      "level": "error",
+      "message": "تم العثور على استعمال prop قديم \"layout\" مع next/image في الملف /home/user/happy-time/src/components/card-overlay/card-overlay-center.tsx. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill)."
+    },
+    {
+      "id": "legacy-layout",
+      "level": "error",
+      "message": "تم العثور على استعمال prop قديم \"layout\" مع next/image في الملف /home/user/happy-time/src/components/card-overlay/card-overlay-right.tsx. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill)."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/layout/header/index.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/components/sections/cart-section/index.tsx — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    },
+    {
+      "id": "legacy-layout",
+      "level": "error",
+      "message": "تم العثور على استعمال prop قديم \"layout\" مع next/image في الملف /home/user/happy-time/src/components/sections/hero.tsx. يجب تحديث استخدام الصورة لخصائص جديدة (width/height أو fill)."
+    },
+    {
+      "id": "authprovider",
+      "level": "info",
+      "message": "تم العثور على AuthProvider في /home/user/happy-time/src/lib/firebase.ts — تأكد من إعداداته ومن عدم الاعتماد على fallback غير مرغوب."
+    }
+  ],
+  "occurrences": [
+    {
+      "file": "/home/user/happy-time/.next/server/app/page.js",
+      "match": "via-placeholder",
+      "snippet": "e: {\\n                    url: 'https://via.placeholder.com/800x400'\\n          "
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/app/page.js",
+      "match": "AuthProvider",
+      "snippet": "Fuser%2Fhappy-time%2Fsrc%2Fcomponents%2FAuthProvider.tsx%22%2C%22ids%22%3A%5B%22"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/app/page_client-reference-manifest.js",
+      "match": "AuthProvider",
+      "snippet": ":{\"(app-pages-browser)/./src/components/AuthProvider.tsx\":{\"*\":{\"id\":\"(ssr)/./sr"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/vendor-chunks/@firebase.js",
+      "match": "AuthProvider",
+      "snippet": "LE_0__.N),\\n/* harmony export */   EmailAuthProvider: () => (/* reexport safe */"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/vendor-chunks/@firebase.js",
+      "match": "next-image-legacy-prop",
+      "snippet": " // Required for compatibility with the legacy SDK (go/firebase-auth-sdk-persist"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/vendor-chunks/embla-carousel.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "r, options);\\n    } else {\\n      const legacyMediaQueryList = node;\\n      lega"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/vendor-chunks/firebase.js",
+      "match": "AuthProvider",
+      "snippet": "edential),\\n/* harmony export */   EmailAuthProvider: () => (/* reexport safe */"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/vendor-chunks/next.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "? values : values[0];\\n    }\\n    const legacyUrl = {\\n        query,\\n        h"
+    },
+    {
+      "file": "/home/user/happy-time/.next/server/vendor-chunks/protobufjs.js",
+      "match": "next-image-legacy-prop",
+      "snippet": ";\\n\\n/**\\n * Infers field features from legacy syntax that may have been specifi"
+    },
+    {
+      "file": "/home/user/happy-time/.next/static/chunks/app/layout.js",
+      "match": "AuthProvider",
+      "snippet": "export */   $: () => (/* binding */ SAMLAuthProvider),\\n/* harmony export */   A"
+    },
+    {
+      "file": "/home/user/happy-time/.next/static/chunks/app/layout.js",
+      "match": "next-image-legacy-prop",
+      "snippet": " // Required for compatibility with the legacy SDK (go/firebase-auth-sdk-persist"
+    },
+    {
+      "file": "/home/user/happy-time/.next/static/chunks/app/not-found.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "erProp, onTouchStart: onTouchStartProp, legacyBehavior = false, onNavigate, ref:"
+    },
+    {
+      "file": "/home/user/happy-time/.next/static/chunks/app/page.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "r, options);\\n    } else {\\n      const legacyMediaQueryList = node;\\n      lega"
+    },
+    {
+      "file": "/home/user/happy-time/.next/static/chunks/main-app.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "rts.\\n        // (This is important for legacy environments.)\\n        return;\\n"
+    },
+    {
+      "file": "/home/user/happy-time/apps/mobile/app/_layout.tsx",
+      "match": "AuthProvider",
+      "snippet": "import { AuthProvider, useAuth } from \"@/AuthProvider.native\"; import { Stack } "
+    },
+    {
+      "file": "/home/user/happy-time/apps/mobile/app/orders.tsx",
+      "match": "AuthProvider",
+      "snippet": "ore.native\"; import { useAuth } from \"@/AuthProvider.native\"; import { Link } fr"
+    },
+    {
+      "file": "/home/user/happy-time/apps/mobile/build/link/linking.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "> {         let callback;         const legacySubscription = nativeLinking?.lega"
+    },
+    {
+      "file": "/home/user/happy-time/apps/mobile/build/rsc/router/host.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "tra?.router?.generatedOrigin;     // In legacy cases, this can be extraneously s"
+    },
+    {
+      "file": "/home/user/happy-time/apps/mobile/build/types.d.ts",
+      "match": "next-image-legacy-prop",
+      "snippet": "ry. It exports `redirectSystemPath` or `legacy_subscribe` functions,  * both met"
+    },
+    {
+      "file": "/home/user/happy-time/apps/mobile/src/AuthProvider.native.tsx",
+      "match": "AuthProvider",
+      "snippet": "eContext(AuthContext);  export function AuthProvider({ children }: { children: R"
+    },
+    {
+      "file": "/home/user/happy-time/firebase-analyze.js",
+      "match": "legacy-layout-next-image",
+      "snippet": "e: 'legacy-layout-next-image', string: 'layout=' },   { name: 'via-placeholder',"
+    },
+    {
+      "file": "/home/user/happy-time/firebase-analyze.js",
+      "match": "via-placeholder",
+      "snippet": "ix     -> يطبّق تصحيحات آمنة (مثل إضافة via.placeholder.com)  *  * ملاحظة: السكر"
+    },
+    {
+      "file": "/home/user/happy-time/firebase-analyze.js",
+      "match": "AuthProvider",
+      "snippet": "ng: 'via.placeholder.com' },   { name: 'AuthProvider', string: 'AuthProvider' },"
+    },
+    {
+      "file": "/home/user/happy-time/firebase-analyze.js",
+      "match": "next/image-import",
+      "snippet": "  { name: 'next/image-import', string: \"from 'next/image'\" },   { name: 'next-im"
+    },
+    {
+      "file": "/home/user/happy-time/firebase-analyze.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "les(cwd); const patterns = [   { name: 'legacy-layout-next-image', string: 'layo"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/_error.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "_5__, 'reportWebVitals');\\n// Re-export legacy methods.\\nconst unstable_getStati"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/(auth)/login/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},60230"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/_not-found/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/_not-found/page_client-reference-manifest.js",
+      "match": "AuthProvider",
+      "snippet": "ing\":{\"(app-pages-browser)/./components/AuthProvider.tsx\":{\"*\":{\"id\":\"(ssr)/./co"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/about/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},60333"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/admin/orders/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/auth/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},58751"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/contact/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/dashboard/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},60230"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/orders/[id]/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},60230"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/orders/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/page.js",
+      "match": "via-placeholder",
+      "snippet": "e: {\\n                    url: 'https://via.placeholder.com/800x400'\\n          "
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/page.js",
+      "match": "AuthProvider",
+      "snippet": "Fuser%2Fhappy-time%2Fsrc%2Fcomponents%2FAuthProvider.tsx%22%2C%22ids%22%3A%5B%22"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/page_client-reference-manifest.js",
+      "match": "AuthProvider",
+      "snippet": "ing\":{\"(app-pages-browser)/./components/AuthProvider.tsx\":{\"*\":{\"id\":\"(ssr)/./co"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/product/[handle]/page.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "ent\":case\"prerender-ppr\":case\"prerender-legacy\":case\"request\":case\"cache\":case\"p"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/signin/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/app/signup/page.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/314.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "ent\":case\"prerender-ppr\":case\"prerender-legacy\":return function(a,b,c){switch(c."
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/322.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/39.js",
+      "match": "AuthProvider",
+      "snippet": "532:(a,b,c)=>{\"use strict\";c.d(b,{GoogleAuthProvider:()=>bb,RecaptchaVerifier:()"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/39.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "onClick:B,onMouseEnter:C,onTouchStart:D,legacyBehavior:E=!1,onNavigate:F,ref:G,u"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/533.js",
+      "match": "AuthProvider",
+      "snippet": ".FirebaseProvider,{children:(0,d.jsx)(f.AuthProvider,{children:a})})})})}},62901"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/90.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "ute,a,c.dynamicTracking);case\"prerender-legacy\":return(0,g.throwToInterruptStati"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/chunks/958.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "ute,c,b.dynamicTracking);case\"prerender-legacy\":b.revalidate=0;let d=Object.defi"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/vendor-chunks/@firebase.js",
+      "match": "AuthProvider",
+      "snippet": "LE_0__.N),\\n/* harmony export */   EmailAuthProvider: () => (/* reexport safe */"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/vendor-chunks/@firebase.js",
+      "match": "next-image-legacy-prop",
+      "snippet": " // Required for compatibility with the legacy SDK (go/firebase-auth-sdk-persist"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/vendor-chunks/embla-carousel.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "r, options);\\n    } else {\\n      const legacyMediaQueryList = node;\\n      lega"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/vendor-chunks/firebase.js",
+      "match": "AuthProvider",
+      "snippet": "edential),\\n/* harmony export */   EmailAuthProvider: () => (/* reexport safe */"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/server/vendor-chunks/protobufjs.js",
+      "match": "next-image-legacy-prop",
+      "snippet": ";\\n\\n/**\\n * Infers field features from legacy syntax that may have been specifi"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/static/chunks/app/layout.js",
+      "match": "AuthProvider",
+      "snippet": "export */   $: () => (/* binding */ SAMLAuthProvider),\\n/* harmony export */   A"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/static/chunks/app/layout.js",
+      "match": "next-image-legacy-prop",
+      "snippet": " // Required for compatibility with the legacy SDK (go/firebase-auth-sdk-persist"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/static/chunks/main.js",
+      "match": "next-image-legacy-prop",
+      "snippet": "(\\\"react.activity\\\");Symbol.for(\\\"react.legacy_hidden\\\"),Symbol.for(\\\"react.trac"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/static/webpack/app/layout.a3ce9f28d270dcdd.hot-update.js",
+      "match": "AuthProvider",
+      "snippet": "/***/ \"(app-pages-browser)/./components/AuthProvider.tsx\": /*!******************"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/static/webpack/app/layout.a6ebe1be26891cd5.hot-update.js",
+      "match": "AuthProvider",
+      "snippet": "/***/ \"(app-pages-browser)/./components/AuthProvider.tsx\": /*!******************"
+    },
+    {
+      "file": "/home/user/happy-time/src/.next/static/webpack/app/layout.d47abe5d04ac1a8b.hot-update.js",
+      "match": "AuthProvider",
+      "snippet": "/***/ \"(app-pages-browser)/./components/AuthProvider.tsx\": /*!******************"
+    },
+    {
+      "file": "/home/user/happy-time/src/app/(auth)/login/page.tsx",
+      "match": "AuthProvider",
+      "snippet": " {       const { signInWithPopup, GoogleAuthProvider } = await import(\"firebase/"
+    },
+    {
+      "file": "/home/user/happy-time/src/app/checkout/page.tsx",
+      "match": "AuthProvider",
+      "snippet": "; import { useAuth } from \"@/components/AuthProvider\"; import { useCart } from \""
+    },
+    {
+      "file": "/home/user/happy-time/src/app/layout.tsx",
+      "match": "AuthProvider",
+      "snippet": "/components/FirebaseProvider\"; import { AuthProvider } from \"@/components/AuthPr"
+    },
+    {
+      "file": "/home/user/happy-time/src/app/orders/page.tsx",
+      "match": "AuthProvider",
+      "snippet": "; import { useAuth } from \"@/components/AuthProvider\"; import { Card, CardConten"
+    },
+    {
+      "file": "/home/user/happy-time/src/app/page.tsx",
+      "match": "via-placeholder",
+      "snippet": "         featuredImage: { url: 'https://via.placeholder.com/800x400' },         "
+    },
+    {
+      "file": "/home/user/happy-time/src/components/AdminGuard.tsx",
+      "match": "AuthProvider",
+      "snippet": "  import { useAuth } from '@/components/AuthProvider' import { db } from '@/lib/"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/AuthProvider.tsx",
+      "match": "AuthProvider",
+      "snippet": " useContext(AuthContext);  export const AuthProvider = ({ children }: { children"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/EnableNotifications.tsx",
+      "match": "AuthProvider",
+      "snippet": "; import { useAuth } from \"@/components/AuthProvider\"; import { enableNotificati"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/EnableNotificationsButton.tsx",
+      "match": "AuthProvider",
+      "snippet": "\" import { useAuth } from \"@/components/AuthProvider\" import { Button } from \"@/"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/auth/GoogleSignIn.tsx",
+      "match": "AuthProvider",
+      "snippet": "'use client';  import { GoogleAuthProvider, signInWithPopup } from 'firebase/aut"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/card-overlay/card-overlay-center.tsx",
+      "match": "legacy-layout-next-image",
+      "snippet": " w-full h-full inset-0\"                 layout=\"fill\"               />          "
+    },
+    {
+      "file": "/home/user/happy-time/src/components/card-overlay/card-overlay-center.tsx",
+      "match": "next/image-import",
+      "snippet": "{ useEffect } from 'react' import Image from 'next/image';  import { Button } fr"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/card-overlay/card-overlay-right.tsx",
+      "match": "legacy-layout-next-image",
+      "snippet": " w-full h-full inset-0\"                 layout=\"fill\"               />          "
+    },
+    {
+      "file": "/home/user/happy-time/src/components/card-overlay/card-overlay-right.tsx",
+      "match": "next/image-import",
+      "snippet": "rrow from '../icons/arrow' import Image from 'next/image';  type Props = {   tit"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/layout/header/index.tsx",
+      "match": "AuthProvider",
+      "snippet": "; import { useAuth } from \"@/components/AuthProvider\"; import Link from \"next/li"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/cart-section/cart-item.tsx",
+      "match": "next/image-import",
+      "snippet": "w } from 'zustand/shallow' import Image from 'next/image';  type Props = {   pro"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/cart-section/index.tsx",
+      "match": "AuthProvider",
+      "snippet": "' import { useAuth } from '@/components/AuthProvider'  export default function C"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/hero.tsx",
+      "match": "legacy-layout-next-image",
+      "snippet": "            alt={title}                 layout=\"fill\"                 className="
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/hero.tsx",
+      "match": "next/image-import",
+      "snippet": "tton } from '../ui/button' import Image from 'next/image'  type Props = {   titl"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/order-history/order-list-item.tsx",
+      "match": "next/image-import",
+      "snippet": "basegen/default-connector' import Image from 'next/image'  type Props = {   orde"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/order-summary/product-list-item.tsx",
+      "match": "next/image-import",
+      "snippet": "import Image from 'next/image'  type Props = {   title: string   quantity: numbe"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/product-details.tsx",
+      "match": "next/image-import",
+      "snippet": "import Image from 'next/image' import Accordion, { Accordion as AccordionType } "
+    },
+    {
+      "file": "/home/user/happy-time/src/components/sections/product-section.tsx",
+      "match": "next/image-import",
+      "snippet": "lib/stores/product-store'; import Image from 'next/image';  type Props = {   pro"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/ui/category-card.tsx",
+      "match": "next/image-import",
+      "snippet": "port Link from 'next/link' import Image from 'next/image'  import ArrowThin from"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/ui/product-card.tsx",
+      "match": "next/image-import",
+      "snippet": "port Link from 'next/link' import Image from 'next/image'  type Props = {   name"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/ui/product-grid-item.tsx",
+      "match": "next/image-import",
+      "snippet": "port Link from 'next/link' import Image from 'next/image' import { cn } from '@/"
+    },
+    {
+      "file": "/home/user/happy-time/src/lib/firebase.ts",
+      "match": "AuthProvider",
+      "snippet": "'firebase/app'; import { getAuth, GoogleAuthProvider } from 'firebase/auth';  co"
+    }
+  ],
+  "cmdResults": {
+    "npm_outdated": "{\n  \"@google/generative-ai\": {\n    \"current\": \"0.21.0\",\n    \"wanted\": \"0.21.0\",\n    \"latest\": \"0.24.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@google/generative-ai\"\n  },\n  \"@radix-ui/react-label\": {\n    \"current\": \"2.1.7\",\n    \"wanted\": \"2.1.8\",\n    \"latest\": \"2.1.8\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@radix-ui/react-label\"\n  },\n  \"@stripe/react-stripe-js\": {\n    \"current\": \"3.10.0\",\n    \"wanted\": \"3.10.0\",\n    \"latest\": \"5.3.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@stripe/react-stripe-js\"\n  },\n  \"@stripe/stripe-js\": {\n    \"current\": \"5.10.0\",\n    \"wanted\": \"5.10.0\",\n    \"latest\": \"8.3.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@stripe/stripe-js\"\n  },\n  \"@types/jest\": {\n    \"current\": \"29.5.14\",\n    \"wanted\": \"29.5.14\",\n    \"latest\": \"30.0.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@types/jest\"\n  },\n  \"@types/node\": {\n    \"current\": \"20.19.24\",\n    \"wanted\": \"20.19.24\",\n    \"latest\": \"24.10.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@types/node\"\n  },\n  \"@typescript-eslint/eslint-plugin\": {\n    \"current\": \"7.18.0\",\n    \"wanted\": \"7.18.0\",\n    \"latest\": \"8.46.3\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@typescript-eslint/eslint-plugin\"\n  },\n  \"@typescript-eslint/parser\": {\n    \"current\": \"7.18.0\",\n    \"wanted\": \"7.18.0\",\n    \"latest\": \"8.46.3\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/@typescript-eslint/parser\"\n  },\n  \"cookies-next\": {\n    \"current\": \"5.1.0\",\n    \"wanted\": \"5.1.0\",\n    \"latest\": \"6.1.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/cookies-next\"\n  },\n  \"eslint\": {\n    \"current\": \"8.57.1\",\n    \"wanted\": \"8.57.1\",\n    \"latest\": \"9.39.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/eslint\"\n  },\n  \"eslint-config-next\": {\n    \"current\": \"15.5.6\",\n    \"wanted\": \"15.5.6\",\n    \"latest\": \"16.0.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/eslint-config-next\"\n  },\n  \"eslint-config-prettier\": {\n    \"current\": \"9.1.2\",\n    \"wanted\": \"9.1.2\",\n    \"latest\": \"10.1.8\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/eslint-config-prettier\"\n  },\n  \"firebase-tools\": {\n    \"current\": \"13.35.1\",\n    \"wanted\": \"13.35.1\",\n    \"latest\": \"14.23.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/firebase-tools\"\n  },\n  \"globals\": {\n    \"current\": \"15.15.0\",\n    \"wanted\": \"15.15.0\",\n    \"latest\": \"16.5.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/globals\"\n  },\n  \"jest\": {\n    \"current\": \"29.7.0\",\n    \"wanted\": \"29.7.0\",\n    \"latest\": \"30.2.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/jest\"\n  },\n  \"jest-environment-jsdom\": {\n    \"current\": \"29.7.0\",\n    \"wanted\": \"29.7.0\",\n    \"latest\": \"30.2.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/jest-environment-jsdom\"\n  },\n  \"next\": {\n    \"current\": \"15.5.6\",\n    \"wanted\": \"15.5.6\",\n    \"latest\": \"16.0.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/next\"\n  },\n  \"react-markdown\": {\n    \"current\": \"9.1.0\",\n    \"wanted\": \"9.1.0\",\n    \"latest\": \"10.1.0\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/react-markdown\"\n  },\n  \"stripe\": {\n    \"current\": \"17.7.0\",\n    \"wanted\": \"17.7.0\",\n    \"latest\": \"19.2.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/stripe\"\n  },\n  \"tailwind-merge\": {\n    \"current\": \"2.6.0\",\n    \"wanted\": \"2.6.0\",\n    \"latest\": \"3.3.1\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/tailwind-merge\"\n  },\n  \"tailwindcss\": {\n    \"current\": \"3.4.18\",\n    \"wanted\": \"3.4.18\",\n    \"latest\": \"4.1.16\",\n    \"dependent\": \"happy-time\",\n    \"location\": \"/home/user/happy-time/node_modules/tailwindcss\"\n  }\n}\n",
+    "eslint": "v8.57.1"
+  },
+  "fixesApplied": [
+    {
+      "fix": "appended-suggestion-next-config",
+      "file": "/home/user/happy-time/next.config.js"
+    }
+  ]
+}</pre>
+  <hr/>
+  <p>ملف JSON: /home/user/happy-time/project-analysis-report.json</p>
+  <p>إصلاحات مُطبّقة: 1</p>
+</body>
+</html>

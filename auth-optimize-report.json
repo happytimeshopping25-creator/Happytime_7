@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-11-05T15:31:19.622Z",
+  "fixes": [
+    {
+      "file": "/home/user/happy-time/src/lib/firebase.ts",
+      "fix": "Replaced with secure recommended firebase.ts"
+    },
+    {
+      "file": "/home/user/happy-time/src/components/AuthProvider.tsx",
+      "fix": "Replaced with secure recommended AuthProvider.tsx"
+    }
+  ],
+  "issues": [
+    {
+      "level": "info",
+      "message": "لم يتم إعداد EmailAuthProvider — سجل الدخول بالبريد الإلكتروني معطل حالياً."
+    },
+    {
+      "level": "error",
+      "message": "AuthProvider.tsx لا يراقب حالة المستخدم (onAuthStateChanged)."
+    },
+    {
+      "level": "warning",
+      "message": "AuthProvider.tsx لا يستخدم useEffect لمتابعة تغيّرات المستخدم."
+    }
+  ]
+}

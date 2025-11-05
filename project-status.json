@@ -1,0 +1,30 @@
+{
+  "timestamp": "2025-11-05_18-11-03",
+  "tools": {
+"node": true,
+"npm": true,
+"firebase": true,
+"git": true
+},
+"files": {
+"package.json": true,
+"next.config.js": true,
+"firebase.json": true,
+".env.local": true,
+"src/lib/firebase.ts": true,
+"src/components/AuthProvider.tsx": true
+},
+"versions": {
+"next": "^15.5.6",
+"firebase": "^12.5.0"
+},
+"eslint": {
+"status": "clean"
+},
+"env": {
+"status": "complete"
+},
+"git": {
+"branch": "main",\n"changes": 14
+}
+}
