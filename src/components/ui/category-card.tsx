@@ -24,6 +24,7 @@ export default function CategoryCard({ handle, name, image }: props) {
           width={467}
           height={563}
           sizes="(max-width: 768px) 100vw, 467px"
+          loading="lazy"
           className="h-full w-full object-cover select-none bg-gray-200 absolute inset-0"
         />
       </div>

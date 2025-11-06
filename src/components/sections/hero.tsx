@@ -29,7 +29,8 @@ export default function Hero({ title, description, primaryCta, secondaryCta, ima
               <Image
                 src={image}
                 alt={title}
-                layout="fill"
+                fill
+                priority
                 className="object-cover bg-gray-200"
               />
               <div className="blurred-edges [--blur:25px]" />

@@ -24,7 +24,8 @@ export function CardOverlayRight({ title, description, cta, image }: Props) {
                 alt={title}
                 sizes="(max-width: 768px) 100vw, 1552px"
                 className="object-cover bg-gray-200 absolute w-full h-full inset-0"
-                layout="fill"
+ fill
+ loading="lazy"
               />
               <div className="blurred-edges [--blur:20px]" />
             </div>

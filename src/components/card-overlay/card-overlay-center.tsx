@@ -36,8 +36,9 @@ export function CardOverlayCenter({ title, description, cta, image }: Props) {
               <Image
                 src={image}
                 alt={title}
+                fill
                 className="object-cover bg-gray-200 absolute w-full h-full inset-0"
-                layout="fill"
+ loading="lazy"
               />
               <div className="blurred-edges [--blur:20px]" />
             </div>
@@ -71,7 +72,7 @@ export function CardOverlayCenter({ title, description, cta, image }: Props) {
                 src={image}
                 alt={title}
                 className="object-cover bg-gray-200 absolute w-full h-full inset-0"
-                layout="fill"
+ loading="lazy"
               />
               <div className="blurred-edges [--blur:20px]" />
             </div>

@@ -13,6 +13,11 @@ const nextConfig = {
   },
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+  images: {
+    loader: "custom",
+    loaderFile: "./loader.js",
+    domains: ['via.placeholder.com', 'images.unsplash.com', 'placehold.co'],
+  },
   
   webpack: (config) => {
     config.resolve.alias = {

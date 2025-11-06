@@ -2,8 +2,8 @@
 
 ## Overview
 
-This document outlines the analysis of the current Next.js project, focusing on code quality, architecture, performance, security, and testing. It serves as a central repository for all findings and recommendations.
-
+This document outlines the analysis and development plan for the Firebase + Next.js application. It covers the current state, areas for improvement, and planned future work, serving as a central repository for all findings and recommendations.
+ 
 ## Current Application State
 
 This section provides a high-level overview of the application's current features and design.
@@ -28,6 +28,11 @@ This section provides a high-level overview of the application's current feature
 -Mobile app version
 
 ## Analysis Plan
+
+This section details the plan and steps for the currently requested changes, focusing on UI improvements.
+ 
+### 1. Update `next.config.js` for Image Optimization
+- Ensure `/next.config.js` includes the following `images` configuration:
 
 This section details the steps to analyze the project based on the provided framework.
 
@@ -120,6 +125,16 @@ This section details the steps to analyze the project based on the provided fram
 - The application is localized for an Arabic-speaking audience, as evidenced by the presence of Arabic text in the `src/app/checkout/page.tsx` and `src/app/orders/page.tsx` files.
 
 ### 7. UI Components
+
+- The project utilizes components such as `Button`, `Textarea`, and `Card`, likely from the `components/ui` directory, for building the user interface.
+- The `src/app/product/[handle]/page.tsx` snippet shows usage of a "Features" component, suggesting a structured approach to displaying product features.
+
+### 8. User Experience
+
+- The project includes a component (`HrefPreview`) for generating link previews, likely enhancing the user experience when sharing links within the mobile app.
+- The `offline.html` file provides a localized offline message in Arabic, improving the app's resilience and user experience when the device is offline.
+
+### Additional Details
 
 - The project utilizes components such as `Button`, `Textarea`, and `Card`, likely from the `components/ui` directory, for building the user interface.
 - The `src/app/product/[handle]/page.tsx` snippet shows usage of a "Features" component, suggesting a structured approach to displaying product features.

@@ -1,10 +1,10 @@
-I1105 17:26:53.718493   42563 load.go:31] Reloading schema and connectors...
-I1105 17:26:53.949271   42563 control.go:94] [/emulator/happy-time 4050] UpdateResources(): done
+I1106 14:01:06.229037     713 load.go:31] Reloading schema and connectors...
+I1106 14:01:06.531998     713 control.go:94] [/emulator/happy-time d51d] UpdateResources(): done
 Main schema: sources: schema/schema.gql [842B] 
 Connector "example": sources: 
-E1105 17:26:54.153894   42563 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
-I1105 17:26:54.167219   42563 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
-Generated sources: main/query.gql [6245B] main/mutation.gql [16770B] prelude.gql [73219B] main/implicit.gql [2485B] main/input.gql [54471B] main/relation.gql [27445B] 
-I1105 17:26:54.171075   42563 load.go:109] Finished reloading
-I1105 17:26:54.274259   42563 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
-I1105 17:26:54.556226   42563 engine.go:169] [/emulator/happy-time 4050] ExecuteGraphqlRead IntrospectionQuery: succeeded. 
+E1106 14:01:06.809802     713 load.go:95] Errors generating SDK: [connector "example"]: invalid Data Connect Connector no query found in connector
+I1106 14:01:06.813225     713 collector.go:107] schema extensions wrote into "/home/user/happy-time/dataconnect/.dataconnect/schema"
+Generated sources: main/relation.gql [27445B] prelude.gql [73219B] main/query.gql [6245B] main/mutation.gql [16770B] main/implicit.gql [2485B] main/input.gql [54471B] 
+I1106 14:01:06.814434     713 load.go:109] Finished reloading
+I1106 14:01:06.832259     713 dev.go:102] Listening on address (HTTP + gRPC): 127.0.0.1:50001
+I1106 14:01:07.023990     713 engine.go:169] [/emulator/happy-time d51d] ExecuteGraphqlRead IntrospectionQuery: succeeded. 

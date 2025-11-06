@@ -238,3 +238,83 @@
 [error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
 [debug] [2025-11-05T17:27:32.923Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
 [debug] [2025-11-05T17:27:32.923Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:22.335Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:22.337Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-06T14:02:22.350Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.351Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.353Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.353Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.370Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.370Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.371Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.373Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.374Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:22.374Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-06T14:02:22.380Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com [none]
+[debug] [2025-11-06T14:02:22.381Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.388Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-06T14:02:22.388Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.390Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-06T14:02:22.390Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.393Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com [none]
+[debug] [2025-11-06T14:02:22.393Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.396Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.396Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.397Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.397Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.399Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.399Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.400Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.400Z] Checked if tokens are valid: true, expires at: 1762441245303
+[debug] [2025-11-06T14:02:22.400Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com [none]
+[debug] [2025-11-06T14:02:22.400Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.403Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-11-06T14:02:22.403Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.411Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com [none]
+[debug] [2025-11-06T14:02:22.411Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.414Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com [none]
+[debug] [2025-11-06T14:02:22.414Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com x-goog-quota-user=projects/happytime6
+[debug] [2025-11-06T14:02:22.821Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-06T14:02:22.823Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2025-11-06T14:02:23.155Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com 403
+[debug] [2025-11-06T14:02:23.155Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com [omitted]
+[debug] [2025-11-06T14:02:23.194Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-06T14:02:23.194Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-06T14:02:23.245Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com 200
+[debug] [2025-11-06T14:02:23.256Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:23.300Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:23.300Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:23.303Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:23.303Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[debug] [2025-11-06T14:02:23.312Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com 403
+[debug] [2025-11-06T14:02:23.312Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseio.com [omitted]
+[debug] [2025-11-06T14:02:23.327Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com 200
+[debug] [2025-11-06T14:02:23.328Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firebaseapphosting.googleapis.com [omitted]
+[debug] [2025-11-06T14:02:23.344Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com 200
+[debug] [2025-11-06T14:02:23.344Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/firestore.googleapis.com [omitted]
+[debug] [2025-11-06T14:02:23.349Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com 200
+[debug] [2025-11-06T14:02:23.350Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/happytime6/services/cloudfunctions.googleapis.com [omitted]
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:23.445Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:23.445Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:23.456Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:23.457Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:23.517Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:23.526Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
+[error] Failed to fetch Firebase Project from Studio Workspace because WORKSPACE_SLUG environment variable is empty
+[debug] [2025-11-06T14:02:23.541Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2025-11-06T14:02:23.545Z] > authorizing via signed-in user (happy.time.shopping25@gmail.com)
